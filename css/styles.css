@@ -123,6 +123,30 @@ body {
     font-size: 20px;
 }
 
+.url-digitacao {
+    display: inline-block;
+    border-right: 2px solid #000000;
+    animation: piscarCursor 1s infinite;
+}
+
+@keyframes piscarCursor {
+    0%, 50% { border-color: #000000; }
+    51%, 100% { border-color: transparent; }
+}
+
+@keyframes digitarTexto {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+.url-site span {
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 0;
+    animation: digitarTexto 2s ease-out 2.2s forwards;
+}
+
 .botao-entrar {
     position: absolute;
     bottom: 120px;

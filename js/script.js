@@ -48,7 +48,34 @@ class TelaEntrada {
     }
 }
 
+function iniciarEfeitoDigitacao() {
+    const urlSpan = document.querySelector('.url-site span');
+    const texto = 'https://github.com/vieiraadev';
+    
+    urlSpan.textContent = '';
+    urlSpan.classList.add('url-digitacao');
+    
+    let i = 0;
+    const velocidade = 40;
+    
+    function digitar() {
+        if (i < texto.length) {
+            urlSpan.textContent += texto.charAt(i);
+            i++;
+            setTimeout(digitar, velocidade);
+        } else {
+            setTimeout(() => {
+                urlSpan.classList.remove('url-digitacao');
+            }, 1000);
+        }
+    }
+    
+    setTimeout(digitar, 2200);
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     new TelaEntrada();
+    configurarAcessibilidade();
+    iniciarEfeitoDigitacao();
     console.log('Tela de entrada inicializada!');
 });
