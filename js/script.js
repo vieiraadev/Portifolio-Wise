@@ -75,7 +75,6 @@ function iniciarEfeitoDigitacao() {
 
 document.addEventListener('DOMContentLoaded', () => {
     new TelaEntrada();
-    configurarAcessibilidade();
     iniciarEfeitoDigitacao();
     console.log('Tela de entrada inicializada!');
 });
