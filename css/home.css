@@ -214,6 +214,31 @@ body {
     color: #0a66c2;
 }
 
+.foto-perfil {
+    position: fixed;
+    right: 150px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    opacity: 0;
+    animation: fadeInPhoto 1s ease-out 1.8s forwards;
+}
+
+.foto-perfil img {
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.foto-perfil img:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+}
+
 @keyframes slideDown {
     from {
         transform: translateY(-100px);
@@ -269,6 +294,28 @@ body {
     }
 }
 
+@keyframes fadeInPhoto {
+    from {
+        transform: translateX(100px) translateY(-50%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0) translateY(-50%);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInPhotoMobile {
+    from {
+        transform: translateX(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
 @keyframes blink {
     0%, 100% { opacity: 1; }
     50% { opacity: 0; }
@@ -298,6 +345,20 @@ body {
     .texto-digitando {
         white-space: normal;
     }
+
+    .foto-perfil {
+        right: 20px;
+        position: absolute;
+        top: auto;
+        bottom: 20px;
+        transform: none;
+        animation: fadeInPhotoMobile 1s ease-out 1.8s forwards;
+    }
+
+    .foto-perfil img {
+        width: 200px;
+        height: 200px;
+    }
 }
 
 @media (max-width: 600px) {
@@ -315,5 +376,10 @@ body {
 
     .area-inicial {
         padding-left: 5%;
+    }
+
+    .foto-perfil img {
+        width: 150px;
+        height: 150px;
     }
 }
