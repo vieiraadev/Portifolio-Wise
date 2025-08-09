@@ -6,57 +6,65 @@
     <title>Portifolio</title>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="/css/home.css">
+    <link rel="stylesheet" href="/css/about.css">
 </head>
 <body>
     <nav class="barra-navegacao">
         <div class="logotipo">VitorVieira</div>
         <ul class="menu-navegacao">
             <li class="item-navegacao">
-                <a href="#" class="link-navegacao ativo">Home</a>
+                <a href="#home" class="link-navegacao ativo">Home</a>
             </li>
             <li class="item-navegacao">
-                <a href="#" class="link-navegacao">Sobre</a>
+                <a href="#sobre" class="link-navegacao">Sobre</a>
             </li>
             <li class="item-navegacao">
-                <a href="#" class="link-navegacao">Projetos</a>
+                <a href="#projetos" class="link-navegacao">Projetos</a>
             </li>
             <li class="item-navegacao">
-                <a href="#" class="link-navegacao">Contato</a>
+                <a href="#contato" class="link-navegacao">Contato</a>
             </li>
         </ul>
     </nav>
-    <div class="area-inicial">
-        <div class="conteudo-inicial">
-            <div class="etiqueta-frontend">
-                <i class='bx bx-code-alt icone-codigo'></i>
-                Fullstack
+
+    <section id="home" class="home">
+        <div class="area-inicial">
+            <div class="conteudo-inicial">
+                <div class="etiqueta-frontend">
+                    <i class='bx bx-code-alt icone-codigo'></i>
+                    Fullstack
+                </div>
+                <h1>Olá, me chamo <br><span class="nome-destaque">Vitor Vieira </span></h1>
+                <h3 class="texto-digitando">Sou&nbsp;<span id="texto"></span><span class="cursor">|</span></h3>
+                <div class="redes-sociais">
+                    <a class="botao-rede email"
+                       href="mailto:vieiravitor604@gmail.com?subject=Contato%20pelo%20portf%C3%B3lio"
+                       aria-label="Enviar email">
+                        <i class='bx bx-envelope'></i>
+                    </a>
+                    <a class="botao-rede linkedin"
+                       href="https://www.linkedin.com/in/vitor-vieira-machado-4741422b9/"
+                       target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                        <i class='bx bxl-linkedin'></i>
+                    </a>
+                    <a class="botao-rede github"
+                       href="https://github.com/vieiraadev"
+                       target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                        <i class='bx bxl-github'></i>
+                    </a>
+                </div>
             </div>
-            <h1>Olá, me chamo <br><span class="nome-destaque">Vitor Vieira </span></h1>
-            <h3 class="texto-digitando">Sou&nbsp;<span id="texto"></span><span class="cursor">|</span></h3>
-            <div class="redes-sociais">
-                <a class="botao-rede email"
-                   href="mailto:vieiravitor604@gmail.com?subject=Contato%20pelo%20portf%C3%B3lio"
-                   aria-label="Enviar email">
-                  <i class='bx bx-envelope'></i>
-                </a>
-              
-                <a class="botao-rede linkedin"
-                   href="https://www.linkedin.com/in/vitor-vieira-machado-4741422b9/"
-                   target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-                  <i class='bx bxl-linkedin'></i>
-                </a>
-              
-                <a class="botao-rede github"
-                   href="https://github.com/vieiraadev"
-                   target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-                  <i class='bx bxl-github'></i>
-                </a>
-              </div>  
+            <div class="foto-perfil">
+                <img src="/img/image.png" alt="Foto de Vitor Vieira">
+            </div>
         </div>
-        <div class="foto-perfil">
-            <img src="/img/image.png" alt="Foto de Vitor Vieira">
-        </div>
-    </div>
+    </section>
+
+    <section id="sobre" class="about">
+        <h2>Sobre Mim</h2>
+    </section>
+
+    <script src="/js/home.js"></script>
+    <script src="/js/about.js"></script>
 </body>
-<script src="/js/home.js"></script>
 </html>
