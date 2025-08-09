@@ -104,6 +104,34 @@ body {
 
 .conteudo-inicial {
     max-width: 600px;
+    position: relative;
+}
+
+.etiqueta-frontend {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(0, 123, 255, 0.1);
+    border: 1px solid #007bff;
+    color: #007bff;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-bottom: 16px;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUpText 1s ease-out 1.3s forwards;
+    transition: box-shadow 0.3s ease;
+}
+
+.etiqueta-frontend:hover {
+    box-shadow: 0 4px 12px rgba(0, 123, 255, 0.6);
+}
+
+
+.icone-codigo {
+    font-size: 16px;
 }
 
 .conteudo-inicial h1 {
@@ -222,6 +250,9 @@ body {
     z-index: 10;
     opacity: 0;
     animation: fadeInPhoto 1s ease-out 1.8s forwards;
+    border: 3px solid #0a66c2; 
+    border-radius: 50%;
+    padding: 20px; 
 }
 
 .foto-perfil img {
@@ -229,15 +260,15 @@ body {
     height: 400px;
     object-fit: cover;
     border-radius: 50%;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
-    transition: all 0.3s ease;
-    cursor: pointer;
+    display: block;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
 .foto-perfil img:hover {
     transform: translateY(-5px) scale(1.02);
-    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25);
 }
+
 
 @keyframes slideDown {
     from {
@@ -307,11 +338,11 @@ body {
 
 @keyframes fadeInPhotoMobile {
     from {
-        transform: translateX(50px);
+        transform: translateY(-30px);
         opacity: 0;
     }
     to {
-        transform: translateX(0);
+        transform: translateY(0);
         opacity: 1;
     }
 }
@@ -321,6 +352,44 @@ body {
     50% { opacity: 0; }
 }
 
+/* Tablet Responsivo */
+@media (max-width: 1024px) {
+    .area-inicial {
+        flex-direction: column;
+        justify-content: center;
+        padding: 20px;
+        text-align: center;
+        margin-top: 0;
+    }
+
+    .foto-perfil {
+        position: static;
+        transform: none;
+        margin-bottom: 40px;
+        order: -1;
+        animation: fadeInPhotoMobile 1s ease-out 1.8s forwards;
+        border: 2px solid #0a66c2;
+        padding: 15px;
+    }
+
+    .foto-perfil img {
+        width: 250px;
+        height: 250px;
+    }
+
+    .conteudo-inicial {
+        max-width: 100%;
+    }
+
+    .conteudo-inicial h1 {
+        font-size: 2.8rem;
+    }
+
+    .conteudo-inicial h3 {
+        font-size: 2rem;
+    }
+}
+
 @media (max-width: 768px) {
     .barra-navegacao {
         padding: 15px 20px;
@@ -328,10 +397,50 @@ body {
 
     .menu-navegacao {
         gap: 20px;
+        align-items: center;
+    }
+
+    .item-navegacao {
+        display: flex;
+        align-items: center;
+    }
+
+    .link-navegacao {
+        display: flex;
+        align-items: center;
+        height: 100%;
     }
 
     .logotipo {
         display: none;
+    }
+
+    .area-inicial {
+        flex-direction: column;
+        justify-content: center;
+        padding: 20px;
+        text-align: center;
+        margin-top: 0;
+        min-height: calc(100vh - 80px);
+    }
+
+    .foto-perfil {
+        position: static;
+        transform: none;
+        margin-bottom: 30px;
+        order: -1;
+        animation: fadeInPhotoMobile 1s ease-out 1.8s forwards;
+        border: 2px solid #0a66c2;
+        padding: 10px;
+    }
+
+    .foto-perfil img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .conteudo-inicial {
+        max-width: 100%;
     }
 
     .conteudo-inicial h1 {
@@ -346,24 +455,38 @@ body {
         white-space: normal;
     }
 
-    .foto-perfil {
-        right: 20px;
-        position: absolute;
-        top: auto;
-        bottom: 20px;
-        transform: none;
-        animation: fadeInPhotoMobile 1s ease-out 1.8s forwards;
-    }
-
-    .foto-perfil img {
-        width: 200px;
-        height: 200px;
+    .redes-sociais {
+        justify-content: center;
+        margin-top: 30px;
     }
 }
 
 @media (max-width: 600px) {
     .menu-navegacao {
         gap: 15px;
+        align-items: center;
+    }
+
+    .item-navegacao {
+        display: flex;
+        align-items: center;
+    }
+
+    .link-navegacao {
+        display: flex;
+        align-items: center;
+        height: 100%;
+        line-height: 1;
+    }
+
+    .foto-perfil {
+        margin-bottom: 25px;
+        padding: 8px;
+    }
+
+    .foto-perfil img {
+        width: 180px;
+        height: 180px;
     }
 
     .conteudo-inicial h1 {
@@ -374,12 +497,49 @@ body {
         font-size: 1.5rem;
     }
 
+    .texto-digitando {
+        font-size: 1.7rem;
+    }
+
+    .etiqueta-frontend {
+        font-size: 0.8rem;
+        padding: 5px 10px;
+        margin-bottom: 12px;
+    }
+
+    .redes-sociais {
+        gap: 12px;
+    }
+
+    .botao-rede {
+        width: 50px;
+        height: 50px;
+    }
+
+    .botao-rede i {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 480px) {
     .area-inicial {
-        padding-left: 5%;
+        padding: 15px;
     }
 
     .foto-perfil img {
-        width: 150px;
-        height: 150px;
+        width: 160px;
+        height: 160px;
+    }
+
+    .conteudo-inicial h1 {
+        font-size: 2rem;
+    }
+
+    .conteudo-inicial h3 {
+        font-size: 1.3rem;
+    }
+
+    .texto-digitando {
+        font-size: 1.5rem;
     }
 }
