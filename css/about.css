@@ -67,7 +67,7 @@
 
 .cartao-estatistica {
     background: linear-gradient(135deg, rgba(0, 123, 255, 0.1), rgba(0, 86, 179, 0.15));
-    border: 2px solid #0056b3;
+    border: 3px solid #0056b3;
     border-radius: 12px;
     padding: 20px 30px;
     display: flex;
@@ -101,7 +101,6 @@
     opacity: 1;
 }
 
-/* Animações dos cartões com delay menor */
 .about.show .cartao-estatistica:nth-child(1) {
     opacity: 1;
     transform: translateX(0);
@@ -216,7 +215,11 @@
     transition: all 0.6s ease;
 }
 
-/* Parágrafos aparecem junto com os cartões */
+.destaque {
+    font-weight: bold;
+    color: #007bff; 
+}
+
 .about.show .paragrafo-sobre:nth-child(1) {
     opacity: 1;
     transform: translateY(0);
