@@ -7,6 +7,6 @@ const observer = new IntersectionObserver((entries) => {
     });
 }, { threshold: 0.1 });
 
-document.querySelectorAll('.about, .experiencia').forEach(section => {
+document.querySelectorAll('.about, .experiencia, .projetos').forEach(section => {
     observer.observe(section);
 });
