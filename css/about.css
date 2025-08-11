@@ -48,3 +48,244 @@
     opacity: 1;
     transform: scaleX(1);
 }
+
+.secao-sobre-conteudo {
+    display: flex;
+    align-items: flex-start;
+    gap: 60px;
+    margin-top: 80px;
+    margin-left: 100px;
+}
+
+.container-estatisticas {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 650px !important;
+    width: 650px !important;
+}
+
+.cartao-estatistica {
+    background: linear-gradient(135deg, rgba(0, 123, 255, 0.1), rgba(0, 86, 179, 0.15));
+    border: 2px solid #0056b3;
+    border-radius: 12px;
+    padding: 20px 30px;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    backdrop-filter: blur(10px);
+    transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+    opacity: 0;
+    transform: translateX(-50px);
+    position: relative;
+    overflow: hidden;
+    height: 95px;
+    width: 100% !important;
+    min-width: 620px !important;
+}
+
+.cartao-estatistica::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #007bff, #0056b3);
+    border-radius: 12px 12px 0 0;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.cartao-estatistica:hover::before {
+    opacity: 1;
+}
+
+/* Animações dos cartões com delay menor */
+.about.show .cartao-estatistica:nth-child(1) {
+    opacity: 1;
+    transform: translateX(0);
+    transition-delay: 1.3s;
+}
+
+.about.show .cartao-estatistica:nth-child(2) {
+    opacity: 1;
+    transform: translateX(0);
+    transition-delay: 1.5s;
+}
+
+.about.show .cartao-estatistica:nth-child(3) {
+    opacity: 1;
+    transform: translateX(0);
+    transition-delay: 1.7s;
+}
+
+.cartao-estatistica:hover {
+    transform: translateX(10px) scale(1.02);
+    border-color: #007bff;
+    box-shadow: 0 8px 25px rgba(0, 123, 255, 0.3);
+}
+
+.icone-estatistica {
+    width: 45px;
+    height: 45px;
+    background: rgba(0, 123, 255, 0.2);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: all 0.3s ease;
+}
+
+.cartao-estatistica:hover .icone-estatistica {
+    background: #007bff;
+    transform: rotateY(360deg);
+}
+
+.icone-estatistica i {
+    font-size: 1.6rem;
+    color: #007bff;
+    transition: color 0.3s ease;
+}
+
+.cartao-estatistica:hover .icone-estatistica i {
+    color: #fff;
+}
+
+.conteudo-estatistica {
+    display: flex;
+    align-items: center;
+    gap: 18px; 
+    flex: 1;
+}
+
+.numero-estatistica {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #007bff;
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+}
+
+.cartao-estatistica:hover .numero-estatistica {
+    color: #fff;
+    transform: scale(1.1);
+}
+
+.texto-estatistica {
+    position: absolute;
+    left: 200px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.titulo-estatistica {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    line-height: 1.2;
+}
+
+.descricao-estatistica {
+    font-size: 0.75rem;
+    color: #ccc;
+    line-height: 1.3;
+}
+
+.texto-sobre {
+    max-width: 520px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.paragrafo-sobre {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #ccc;
+    text-align: justify;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease;
+}
+
+/* Parágrafos aparecem junto com os cartões */
+.about.show .paragrafo-sobre:nth-child(1) {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 1.4s;
+}
+
+.about.show .paragrafo-sobre:nth-child(2) {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 1.6s;
+}
+
+@media (max-width: 768px) {
+    .container-estatisticas {
+        max-width: 100%;
+    }
+    
+    .cartao-estatistica {
+        padding: 15px 20px;
+        height: 85px;
+        gap: 20px;
+    }
+    
+    .conteudo-estatistica {
+        gap: 15px;
+    }
+    
+    .numero-estatistica {
+        font-size: 1.8rem;
+    }
+    
+    .titulo-estatistica {
+        font-size: 0.8rem;
+    }
+    
+    .descricao-estatistica {
+        font-size: 0.7rem;
+    }
+    
+    .texto-estatistica {
+        left: 150px;
+    }
+}
+
+@media (max-width: 480px) {
+    .cartao-estatistica {
+        gap: 15px;
+        padding: 12px 18px;
+        height: 78px;
+    }
+    
+    .icone-estatistica {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .icone-estatistica i {
+        font-size: 1.4rem;
+    }
+    
+    .conteudo-estatistica {
+        gap: 12px;
+    }
+    
+    .numero-estatistica {
+        font-size: 1.6rem;
+    }
+    
+    .texto-estatistica {
+        left: 120px;
+    }
+}
