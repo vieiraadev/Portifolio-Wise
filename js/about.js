@@ -7,4 +7,7 @@ const observer = new IntersectionObserver((entries) => {
     });
 }, { threshold: 0.1 });
 
-observer.observe(document.querySelector('.about'));
+document.querySelectorAll('.about, .experiencia').forEach(section => {
+    observer.observe(section);
+});
+

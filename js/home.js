@@ -33,5 +33,4 @@ function digitarTexto() {
     setTimeout(digitarTexto, velocidade);
 }
 
-// Iniciar o efeito após as animações de texto terminarem
 setTimeout(digitarTexto, 3500);
