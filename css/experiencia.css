@@ -6,12 +6,14 @@
     opacity: 0;
     transform: translateY(80px) scale(0.95);
     transition: opacity 0.8s ease-out, transform 1s cubic-bezier(0.25, 1, 0.5, 1);
-   }
-   .experiencia.show {
+}
+
+.experiencia.show {
     opacity: 1;
     transform: translateY(0) scale(1);
-   }
-   .experiencia h2 {
+}
+
+.experiencia h2 {
     font-size: 3.5rem;
     font-weight: 700;
     background: linear-gradient(135deg, #007bff, #0056b3, #004085);
@@ -22,12 +24,14 @@
     opacity: 0;
     transform: translateY(30px);
     transition: opacity 0.6s ease-out 0.4s, transform 0.8s ease-out 0.4s;
-   }
-   .experiencia.show h2 {
+}
+
+.experiencia.show h2 {
     opacity: 1;
     transform: translateY(0);
-   }
-   .experiencia h2::after {
+}
+
+.experiencia h2::after {
     content: '';
     display: block;
     width: 80px;
@@ -38,16 +42,339 @@
     opacity: 0;
     transform: scaleX(0);
     transition: transform 0.5s ease-out 0.8s, opacity 0.5s ease-out 0.8s;
-   }
-   .experiencia.show h2::after {
+}
+
+.experiencia.show h2::after {
     opacity: 1;
     transform: scaleX(1);
-   }
-   .experiencia .grid-trajetoria {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    column-gap: 72px;
-    row-gap: 480px;
+}
+
+.linha-do-tempo {
+    position: relative;
     max-width: 1200px;
-    margin: 50px auto 0;
-   }
+    margin: 60px auto 0;
+    padding: 0 20px;
+}
+
+.linha-do-tempo::after {
+    content: '';
+    position: absolute;
+    width: 4px;
+    background: linear-gradient(to bottom, rgba(0,123,255,.4), rgba(0,86,179,.4));
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -2px;
+    border-radius: 2px;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 1.2s ease-out 0.6s;
+}
+
+.experiencia.show .linha-do-tempo::after {
+    transform: scaleY(1);
+}
+
+.card-tempo {
+    position: relative;
+    width: 50%;
+    padding: 25px;
+    margin-bottom: 40px;
+}
+
+.card-tempo.esquerda { 
+    left: 0; 
+    text-align: right;
+    padding-right: 40px;
+}
+
+.card-tempo.direita { 
+    left: 50%; 
+    text-align: left;
+    padding-left: 40px;
+}
+
+.card-tempo::before {
+    content: '';
+    position: absolute;
+    top: 40px;
+    width: 20px;
+    height: 20px;
+    background: #000;
+    border: 4px solid #007bff;
+    border-radius: 50%;
+    z-index: 3;
+    box-shadow: 0 0 0 8px rgba(0,123,255,.15), 0 0 25px rgba(0,123,255,.3);
+    right: -10px;
+    opacity: 0;
+    transform: scale(0);
+    transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.card-tempo.direita::before { 
+    left: -10px; 
+    right: auto;
+    border-color: #0056b3;
+    box-shadow: 0 0 0 8px rgba(0,86,179,.15), 0 0 25px rgba(0,86,179,.3);
+}
+
+.card-tempo.animate::before {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.card-tempo .conteudo-card {
+    background: linear-gradient(135deg, rgba(0, 123, 255, 0.1), rgba(0, 86, 179, 0.15));
+    border: 3px solid #0056b3;
+    border-radius: 12px;
+    padding: 25px 30px;
+    backdrop-filter: blur(10px);
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    transition: all 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.card-tempo.esquerda .conteudo-card {
+    border-color: #007bff;
+    transform: translateX(-60px) translateY(40px) scale(0.9);
+}
+
+.card-tempo.direita .conteudo-card {
+    border-color: #0056b3;
+    transform: translateX(60px) translateY(40px) scale(0.9);
+}
+
+.card-tempo.animate .conteudo-card {
+    opacity: 1;
+    transform: translateX(0) translateY(0) scale(1);
+}
+
+.card-tempo[data-ordem="1"] .conteudo-card { transition-delay: 0.2s; }
+.card-tempo[data-ordem="2"] .conteudo-card { transition-delay: 0.4s; }
+.card-tempo[data-ordem="3"] .conteudo-card { transition-delay: 0.6s; }
+.card-tempo[data-ordem="4"] .conteudo-card { transition-delay: 0.8s; }
+
+.card-tempo[data-ordem="1"]::before { transition-delay: 0.1s; }
+.card-tempo[data-ordem="2"]::before { transition-delay: 0.3s; }
+.card-tempo[data-ordem="3"]::before { transition-delay: 0.5s; }
+.card-tempo[data-ordem="4"]::before { transition-delay: 0.7s; }
+
+.card-tempo .conteudo-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #007bff, #0056b3);
+    border-radius: 12px 12px 0 0;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.card-tempo .conteudo-card:hover::before {
+    opacity: 1;
+}
+
+.card-tempo .conteudo-card:hover {
+    transform: translateY(-5px) scale(1.02);
+    border-color: #007bff;
+    box-shadow: 0 15px 40px rgba(0, 123, 255, 0.25);
+}
+
+.card-tempo.direita .conteudo-card:hover {
+    border-color: #0056b3;
+    box-shadow: 0 15px 40px rgba(0, 86, 179, 0.25);
+}
+
+.topo-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    gap: 15px;
+}
+
+.card-tempo.esquerda .topo-card {
+    flex-direction: row-reverse;
+}
+
+.titulo-card {
+    margin: 0;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #007bff;
+    letter-spacing: 0.3px;
+    transition: color 0.3s ease;
+}
+
+.card-tempo .conteudo-card:hover .titulo-card {
+    color: #fff;
+}
+
+.selo-periodo {
+    font-size: 0.75rem;
+    padding: 6px 12px;
+    border-radius: 20px;
+    background: rgba(0, 123, 255, 0.15);
+    color: #bcd8ff;
+    border: 1px solid rgba(0, 123, 255, 0.4);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: 600;
+    flex-shrink: 0;
+}
+
+.card-tempo.direita .selo-periodo {
+    background: rgba(0, 86, 179, 0.15);
+    border-color: rgba(0, 86, 179, 0.4);
+    color: #c3d7ff;
+}
+
+.empresa-card {
+    margin: 0 0 12px;
+    color: #e6efff;
+    font-weight: 600;
+    font-size: 1.1rem;
+    letter-spacing: 0.2px;
+}
+
+.descricao-card {
+    margin: 0 0 20px;
+    color: #cfcfcf;
+    line-height: 1.6;
+    font-weight: 300;
+    font-size: 0.95rem;
+}
+
+.tecnologias-card {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 15px;
+}
+
+.card-tempo.esquerda .tecnologias-card {
+    justify-content: flex-end;
+}
+
+.tech-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 0.75rem;
+    padding: 5px 10px;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.08);
+    color: #d7e6ff;
+    border: 1px solid rgba(103, 167, 255, 0.3);
+    transition: all 0.3s ease;
+}
+
+.tech-chip:hover {
+    background: rgba(0, 123, 255, 0.2);
+    border-color: #007bff;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 900px) {
+    .linha-do-tempo::after { 
+        left: 30px; 
+        width: 3px;
+    }
+    
+    .card-tempo {
+        width: 100%;
+        padding: 15px 15px 15px 60px;
+        left: 0 !important;
+        text-align: left;
+        margin-bottom: 25px;
+    }
+    
+    .card-tempo::before { 
+        left: 20px; 
+        right: auto;
+        top: 35px;
+        width: 18px;
+        height: 18px;
+    }
+    
+    .topo-card {
+        flex-direction: row;
+    }
+    
+    .tecnologias-card {
+        justify-content: flex-start;
+    }
+
+    .card-tempo.esquerda .conteudo-card,
+    .card-tempo.direita .conteudo-card {
+        transform: translateY(40px) scale(0.9);
+    }
+}
+
+@media (max-width: 768px) {
+    .experiencia {
+        padding: 60px 15px;
+    }
+    
+    .experiencia h2 {
+        font-size: 2.8rem;
+    }
+    
+    .linha-do-tempo {
+        margin-top: 40px;
+        padding: 0 10px;
+    }
+    
+    .card-tempo {
+        padding: 12px 12px 12px 50px;
+        margin-bottom: 20px;
+    }
+    
+    .card-tempo .conteudo-card {
+        padding: 20px 22px;
+    }
+    
+    .titulo-card {
+        font-size: 1.2rem;
+    }
+    
+    .empresa-card {
+        font-size: 1rem;
+    }
+    
+    .descricao-card {
+        font-size: 0.9rem;
+        margin-bottom: 15px;
+    }
+    
+    .topo-card {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .card-tempo .conteudo-card,
+    .card-tempo::before,
+    .tech-chip,
+    .experiencia,
+    .experiencia h2 {
+        transition: none;
+        transform: none;
+    }
+    
+    .card-tempo.animate .conteudo-card {
+        opacity: 1;
+        transform: none;
+    }
+    
+    .experiencia.show {
+        opacity: 1;
+        transform: none;
+    }
+}

@@ -10,4 +10,3 @@ const observer = new IntersectionObserver((entries) => {
 document.querySelectorAll('.about, .experiencia').forEach(section => {
     observer.observe(section);
 });
-
