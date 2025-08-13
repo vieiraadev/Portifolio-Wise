@@ -1,240 +1,263 @@
 .competencias {
-    background-color: #000;
-    color: #fff;
-    text-align: center;
-    padding: 80px 20px;
-    opacity: 0;
-    transform: translateY(80px) scale(0.95);
-    transition: opacity 0.8s ease-out, transform 1s cubic-bezier(0.25, 1, 0.5, 1);
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  padding: 80px 20px;
+  opacity: 0;
+  transform: translateY(80px) scale(0.95);
+  transition: opacity 0.8s ease-out, transform 1s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.competencias.show {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.competencias h2 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #007bff, #0056b3, #004085);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+  margin-bottom: 20px;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out 0.4s, transform 0.8s ease-out 0.4s;
+}
+
+.competencias.show h2 {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.competencias h2::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: #0056b3;
+  margin: 20px auto 0;
+  border-radius: 2px;
+  opacity: 0;
+  transform: scaleX(0);
+  transition: transform 0.5s ease-out 0.8s, opacity 0.5s ease-out 0.8s;
+}
+
+.competencias.show h2::after {
+  opacity: 1;
+  transform: scaleX(1);
+}
+
+.grade-competencias {
+  margin: 60px auto 0;
+  max-width: 1200px;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 18px;
+  padding: 0 20px;
+}
+
+.cartao-competencia {
+  grid-column: span 12;
+  background: linear-gradient(135deg, rgba(0,123,255,0.1), rgba(0,86,179,0.15));
+  border: 3px solid #0056b3;
+  border-radius: 14px;
+  padding: 18px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 12px;
+  position: relative;
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+  transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.cartao-competencia::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #007bff, #0056b3);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.cartao-competencia:hover {
+  transform: translateY(-4px) scale(1.01);
+  border-color: #007bff;
+  box-shadow: 0 8px 25px rgba(0, 123, 255, 0.3);
+}
+
+.cartao-competencia:hover::before {
+  opacity: 1;
+}
+
+.competencias.show .cartao-competencia:nth-child(1) {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.6s;
+}
+
+.competencias.show .cartao-competencia:nth-child(2) {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.75s;
+}
+
+.competencias.show .cartao-competencia:nth-child(3) {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.9s;
+}
+
+.competencias.show .cartao-competencia:nth-child(4) {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 1.05s;
+}
+
+.competencias.show .cartao-competencia:nth-child(5) {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 1.2s;
+}
+
+.competencias.show .cartao-competencia:nth-child(6) {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 1.35s;
+}
+
+.competencias.show .cartao-competencia:nth-child(7) {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 1.5s;
+}
+
+.competencias.show .cartao-competencia:nth-child(8) {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 1.65s;
+}
+
+.icone-competencia {
+  width: 90px;
+  height: 90px;
+  border-radius: 16px;
+  background: rgba(0, 123, 255, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.icone-competencia i {
+  font-size: 2.8rem;
+  color: #007bff;
+  transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+@keyframes bounce {
+  0%, 20%, 60%, 100% {
+      transform: translateY(0) scale(1);
   }
-  
-  .competencias.show {
-    opacity: 1;
-    transform: translateY(0) scale(1);
+  40% {
+      transform: translateY(-15px) scale(1.05);
+  }
+  80% {
+      transform: translateY(-7px) scale(1.02);
+  }
+}
+
+.cartao-competencia:hover .icone-competencia {
+  background: #007bff;
+  animation: bounce 0.8s ease;
+}
+
+.cartao-competencia:hover .icone-competencia i {
+  color: #fff;
+}
+
+.conteudo-competencia {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  width: 100%;
+}
+
+.titulo-competencia {
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+}
+
+.selo-nivel {
+  font-size: 0.75rem;
+  padding: 4px 8px;
+  border: 1.5px solid #007bff;
+  border-radius: 999px;
+  color: #a5c8ff;
+  background: rgba(0, 123, 255, 0.08);
+  line-height: 1;
+  display: inline-block;
+  margin: 2px auto 4px;
+  width: fit-content;
+  max-width: 110px;
+  white-space: nowrap;
+  text-align: center;
+}
+
+@media (min-width: 720px) {
+  .cartao-competencia {
+      grid-column: span 6;
+  }
+}
+
+@media (min-width: 1080px) {
+  .cartao-competencia {
+      grid-column: span 3;
+  }
+}
+
+@media (max-width: 480px) {
+  .competencias {
+      padding: 60px 15px;
   }
   
   .competencias h2 {
-    font-size: 3.5rem;
-    font-weight: 700;
-    background: linear-gradient(135deg, #007bff, #0056b3, #004085);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    display: inline-block;
-    margin-bottom: 20px;
-    opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 0.6s ease-out 0.4s, transform 0.8s ease-out 0.4s;
-  }
-  
-  .competencias.show h2 {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  
-  .competencias h2::after {
-    content: '';
-    display: block;
-    width: 80px;
-    height: 4px;
-    background: #0056b3;
-    margin: 20px auto 0;
-    border-radius: 2px;
-    opacity: 0;
-    transform: scaleX(0);
-    transition: transform 0.5s ease-out 0.8s, opacity 0.5s ease-out 0.8s;
-  }
-  
-  .competencias.show h2::after {
-    opacity: 1;
-    transform: scaleX(1);
-  }
-  
-  .grade-competencias {
-    margin: 60px auto 0;
-    max-width: 1200px;
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    gap: 18px;
-    padding: 0 20px;
-  }
-  
-  .cartao-competencia {
-    grid-column: span 12;
-    background: linear-gradient(135deg, rgba(0,123,255,0.1), rgba(0,86,179,0.15));
-    border: 3px solid #0056b3;
-    border-radius: 14px;
-    padding: 18px 16px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 12px;
-    position: relative;
-    overflow: hidden;
-    backdrop-filter: blur(10px);
-    transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  
-  .cartao-competencia::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 3px;
-    background: linear-gradient(90deg, #007bff, #0056b3);
-    opacity: 0;
-    transition: opacity 0.3s ease;
-  }
-  
-  .cartao-competencia:hover {
-    transform: translateY(-4px) scale(1.01);
-    border-color: #007bff;
-    box-shadow: 0 8px 25px rgba(0, 123, 255, 0.3);
-  }
-  
-  .cartao-competencia:hover::before {
-    opacity: 1;
-  }
-  
-  .competencias.show .cartao-competencia:nth-child(1) {
-    opacity: 1;
-    transform: translateY(0);
-    transition-delay: 0.6s;
-  }
-  
-  .competencias.show .cartao-competencia:nth-child(2) {
-    opacity: 1;
-    transform: translateY(0);
-    transition-delay: 0.75s;
-  }
-  
-  .competencias.show .cartao-competencia:nth-child(3) {
-    opacity: 1;
-    transform: translateY(0);
-    transition-delay: 0.9s;
-  }
-  
-  .competencias.show .cartao-competencia:nth-child(4) {
-    opacity: 1;
-    transform: translateY(0);
-    transition-delay: 1.05s;
+      font-size: 2.4rem;
   }
   
   .icone-competencia {
-    width: 90px;
-    height: 90px;
-    border-radius: 16px;
-    background: rgba(0, 123, 255, 0.2);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.3s ease;
-  }
-  
-  .icone-competencia i {
-    font-size: 2.8rem;
-    color: #007bff;
-    transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
-  }
-  
-  @keyframes bounce {
-    0%, 20%, 60%, 100% {
-      transform: translateY(0) scale(1);
-    }
-    40% {
-      transform: translateY(-15px) scale(1.05);
-    }
-    80% {
-      transform: translateY(-7px) scale(1.02);
-    }
-  }
-  
-  .cartao-competencia:hover .icone-competencia {
-    background: #007bff;
-    animation: bounce 0.8s ease;
-  }
-  
-  .cartao-competencia:hover .icone-competencia i {
-    color: #fff;
-  }
-  
-  .conteudo-competencia {
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-    width: 100%;
-  }
-  
-  .titulo-competencia {
-    font-size: 1rem;
-    font-weight: 700;
-    letter-spacing: 0.2px;
-  }
-  
-  .selo-nivel {
-    font-size: 0.75rem;
-    padding: 4px 8px;
-    border: 1.5px solid #007bff;
-    border-radius: 999px;
-    color: #a5c8ff;
-    background: rgba(0, 123, 255, 0.08);
-    line-height: 1;
-    display: inline-block;
-    margin: 2px auto 4px;
-    width: fit-content;
-    max-width: 110px;
-    white-space: nowrap;
-    text-align: center;
-  }
-  
-  @media (min-width: 720px) {
-    .cartao-competencia {
-      grid-column: span 6;
-    }
-  }
-  
-  @media (min-width: 1080px) {
-    .cartao-competencia {
-      grid-column: span 3;
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .competencias {
-      padding: 60px 15px;
-    }
-    
-    .competencias h2 {
-      font-size: 2.4rem;
-    }
-    
-    .icone-competencia {
       width: 80px;
       height: 80px;
       border-radius: 14px;
-    }
-    
-    .icone-competencia i {
-      font-size: 2.5rem;
-    }
-    
-    .cartao-competencia {
-      padding: 16px 14px;
-      gap: 10px;
-    }
   }
   
-  @media (prefers-reduced-motion: reduce) {
-    .competencias,
-    .competencias h2,
-    .competencias h2::after,
-    .cartao-competencia,
-    .icone-competencia,
-    .barra-nivel .fill {
+  .icone-competencia i {
+      font-size: 2.5rem;
+  }
+  
+  .cartao-competencia {
+      padding: 16px 14px;
+      gap: 10px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .competencias,
+  .competencias h2,
+  .competencias h2::after,
+  .cartao-competencia,
+  .icone-competencia {
       transition: none !important;
       transform: none !important;
-    }
   }
+}
