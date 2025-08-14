@@ -352,19 +352,66 @@ body {
     50% { opacity: 0; }
 }
 
-@media (max-width: 1200px) {
+/* Desktop grande (1921px+) */
+@media (min-width: 1921px) {
     .area-inicial {
-        padding: 0 5%;
-        margin: -60px auto 0;
+        max-width: 1800px;
+        padding: 0 8%;
     }
     
     .foto-perfil {
-        margin-left: 20px;
+        margin-left: 80px;
+    }
+    
+    .foto-perfil img {
+        width: 450px;
+        height: 450px;
+    }
+}
+
+/* Desktop extra grande (1441px - 1920px) */
+@media (max-width: 1920px) and (min-width: 1441px) {
+    .area-inicial {
+        max-width: 1600px;
+        padding: 0 6%;
+    }
+    
+    .foto-perfil {
+        margin-left: 60px;
+    }
+}
+
+/* Desktop grande (1201px - 1440px) */
+@media (max-width: 1440px) and (min-width: 1201px) {
+    .area-inicial {
+        max-width: 1400px;
+        padding: 0 5%;
+        margin: -40px auto 0;
+    }
+    
+    .foto-perfil {
+        margin-left: 40px;
+    }
+}
+
+/* Desktop médio (1025px - 1200px) */
+@media (max-width: 1200px) and (min-width: 1025px) {
+    .area-inicial {
+        padding: 0 4%;
+        margin: -50px auto 0;
+    }
+    
+    .foto-perfil {
+        margin-left: 30px;
     }
     
     .foto-perfil img {
         width: 350px;
         height: 350px;
+    }
+    
+    .conteudo-inicial {
+        max-width: 550px;
     }
     
     .conteudo-inicial h1 {
@@ -376,23 +423,23 @@ body {
     }
 }
 
-@media (max-width: 1024px) {
+/* Tablet landscape (769px - 1024px) */
+@media (max-width: 1024px) and (min-width: 769px) {
     .area-inicial {
         flex-direction: column;
-        justify-content: flex-start;
-        padding: 60px 20px 40px;
+        justify-content: center;
+        padding: 100px 40px 60px;
         text-align: center;
         margin: 0 auto;
         min-height: 100vh;
-        padding-top: 120px;
     }
 
     .foto-perfil {
         position: static;
-        margin: 0 0 50px 0;
+        margin: 0 0 40px 0;
         order: -1;
         animation: fadeInPhotoMobile 0.7s ease-out 1.0s forwards;
-        border: 2px solid #0a66c2;
+        border: 3px solid #0a66c2;
         padding: 15px;
     }
 
@@ -403,7 +450,7 @@ body {
 
     .conteudo-inicial {
         max-width: 100%;
-        margin-top: 30px;
+        margin-top: 20px;
     }
 
     .conteudo-inicial h1 {
@@ -413,18 +460,22 @@ body {
     .conteudo-inicial h3 {
         font-size: 2rem;
     }
+    
+    .redes-sociais {
+        justify-content: center;
+        margin-top: 30px;
+    }
 }
 
-@media (max-width: 768px) {
+/* Tablet portrait (481px - 768px) */
+@media (max-width: 768px) and (min-width: 481px) {
     .barra-navegacao {
-        padding: 15px 20px;
-        position: sticky;
-        top: 0;
+        padding: 12px 20px;
+        height: 60px;
     }
 
     .menu-navegacao {
         gap: 20px;
-        align-items: center;
     }
 
     .item-navegacao {
@@ -445,16 +496,15 @@ body {
     .area-inicial {
         flex-direction: column;
         justify-content: flex-start;
-        padding: 80px 20px 40px;
+        padding: 80px 30px 50px;
         text-align: center;
         margin-top: 0;
         min-height: calc(100vh - 60px);
-        padding-top: 140px;
     }
     
     .foto-perfil {
         position: static;
-        margin: 0 0 40px 0;
+        margin: 0 0 30px 0;
         order: -1;
         animation: fadeInPhotoMobile 0.7s ease-out 1.0s forwards;
         border: 2px solid #0a66c2;
@@ -462,13 +512,13 @@ body {
     }
 
     .foto-perfil img {
-        width: 200px;
-        height: 200px;
+        width: 220px;
+        height: 220px;
     }
 
     .conteudo-inicial {
         max-width: 100%;
-        margin-top: 40px;
+        margin-top: 20px;
     }
 
     .conteudo-inicial h1 {
@@ -476,20 +526,31 @@ body {
     }
 
     .conteudo-inicial h3 {
-        font-size: 1.8rem;
+        font-size: 1.9rem;
     }
 
     .texto-digitando {
-        white-space: normal;
+        font-size: 1.7rem;
     }
 
     .redes-sociais {
         justify-content: center;
-        margin-top: 40px;
+        margin-top: 25px;
+        gap: 16px;
+    }
+    
+    .botao-rede {
+        width: 54px;
+        height: 54px;
+    }
+
+    .botao-rede i {
+        font-size: 22px;
     }
 }
 
-@media (max-width: 600px) {
+/* Mobile grande (481px - 600px) */
+@media (max-width: 600px) and (min-width: 481px) {
     .menu-navegacao {
         gap: 15px;
         align-items: center;
@@ -559,13 +620,50 @@ body {
     }
 }
 
+/* Mobile médio (320px - 480px) */
 @media (max-width: 480px) {
+    .barra-navegacao {
+        padding: 15px 20px;
+        position: sticky;
+        top: 0;
+    }
+
+    .menu-navegacao {
+        gap: 20px;
+        align-items: center;
+    }
+
+    .item-navegacao {
+        display: flex;
+        align-items: center;
+    }
+
+    .link-navegacao {
+        display: flex;
+        align-items: center;
+        height: 100%;
+    }
+
+    .logotipo {
+        display: none;
+    }
+
     .area-inicial {
+        flex-direction: column;
+        justify-content: flex-start;
         padding: 180px 15px 60px;
+        text-align: center;
+        margin-top: 0;
+        min-height: calc(100vh - 60px);
     }
 
     .foto-perfil {
-        margin-bottom: 40px;
+        position: static;
+        margin: 0 0 40px 0;
+        order: -1;
+        animation: fadeInPhotoMobile 0.7s ease-out 1.0s forwards;
+        border: 2px solid #0a66c2;
+        padding: 8px;
     }
 
     .foto-perfil img {
@@ -574,6 +672,7 @@ body {
     }
 
     .conteudo-inicial {
+        max-width: 100%;
         margin-top: 60px;
     }
 
@@ -587,9 +686,60 @@ body {
 
     .texto-digitando {
         font-size: 1.5rem;
+        white-space: normal;
+    }
+
+    .etiqueta-frontend {
+        font-size: 0.8rem;
+        padding: 5px 10px;
+        margin-bottom: 12px;
     }
 
     .redes-sociais {
+        justify-content: center;
         margin-top: 50px;
+        gap: 12px;
+    }
+
+    .botao-rede {
+        width: 50px;
+        height: 50px;
+    }
+
+    .botao-rede i {
+        font-size: 20px;
+    }
+}
+
+/* Mobile pequeno (até 319px) */
+@media (max-width: 319px) {
+    .area-inicial {
+        padding: 160px 10px 50px;
+    }
+
+    .foto-perfil img {
+        width: 140px;
+        height: 140px;
+    }
+
+    .conteudo-inicial h1 {
+        font-size: 1.8rem;
+    }
+
+    .conteudo-inicial h3 {
+        font-size: 1.2rem;
+    }
+
+    .texto-digitando {
+        font-size: 1.3rem;
+    }
+
+    .botao-rede {
+        width: 45px;
+        height: 45px;
+    }
+
+    .botao-rede i {
+        font-size: 18px;
     }
 }
