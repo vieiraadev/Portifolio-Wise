@@ -98,13 +98,16 @@ body {
 .area-inicial {
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: space-between;
     min-height: 100vh;
-    padding-left: 8%;
+    padding: 0 8%;
     background-color: #000;
+    max-width: 1400px;
+    margin: -40px auto 0;
 }
 
 .conteudo-inicial {
+    flex: 1;
     max-width: 600px;
     position: relative;
 }
@@ -244,16 +247,13 @@ body {
 }
 
 .foto-perfil {
-    position: absolute;
-    right: 150px;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 10;
+    flex-shrink: 0;
+    margin-left: 40px;
     opacity: 0;
     animation: fadeInPhoto 0.7s ease-out 1.0s forwards;
     border: 3px solid #0a66c2; 
     border-radius: 50%;
-    padding: 20px; 
+    padding: 20px;
 }
 
 .foto-perfil img {
@@ -327,11 +327,11 @@ body {
 
 @keyframes fadeInPhoto {
     from {
-        transform: translateX(100px) translateY(-50%);
+        transform: translateX(50px);
         opacity: 0;
     }
     to {
-        transform: translateX(0) translateY(-50%);
+        transform: translateX(0);
         opacity: 1;
     }
 }
@@ -352,19 +352,44 @@ body {
     50% { opacity: 0; }
 }
 
+@media (max-width: 1200px) {
+    .area-inicial {
+        padding: 0 5%;
+        margin: -60px auto 0;
+    }
+    
+    .foto-perfil {
+        margin-left: 20px;
+    }
+    
+    .foto-perfil img {
+        width: 350px;
+        height: 350px;
+    }
+    
+    .conteudo-inicial h1 {
+        font-size: 2.8rem;
+    }
+    
+    .conteudo-inicial h3 {
+        font-size: 2rem;
+    }
+}
+
 @media (max-width: 1024px) {
     .area-inicial {
         flex-direction: column;
-        justify-content: center;
-        padding: 20px;
+        justify-content: flex-start;
+        padding: 60px 20px 40px;
         text-align: center;
-        margin-top: 0;
+        margin: 0 auto;
+        min-height: 100vh;
+        padding-top: 120px;
     }
 
     .foto-perfil {
         position: static;
-        transform: none;
-        margin-bottom: 40px;
+        margin: 0 0 50px 0;
         order: -1;
         animation: fadeInPhotoMobile 0.7s ease-out 1.0s forwards;
         border: 2px solid #0a66c2;
@@ -378,6 +403,7 @@ body {
 
     .conteudo-inicial {
         max-width: 100%;
+        margin-top: 30px;
     }
 
     .conteudo-inicial h1 {
@@ -418,17 +444,17 @@ body {
 
     .area-inicial {
         flex-direction: column;
-        justify-content: center;
-        padding: 20px;
+        justify-content: flex-start;
+        padding: 80px 20px 40px;
         text-align: center;
         margin-top: 0;
-        min-height: calc(100vh - 80px);
+        min-height: calc(100vh - 60px);
+        padding-top: 140px;
     }
     
     .foto-perfil {
         position: static;
-        transform: none;
-        margin-bottom: 30px;
+        margin: 0 0 40px 0;
         order: -1;
         animation: fadeInPhotoMobile 0.7s ease-out 1.0s forwards;
         border: 2px solid #0a66c2;
@@ -442,6 +468,7 @@ body {
 
     .conteudo-inicial {
         max-width: 100%;
+        margin-top: 40px;
     }
 
     .conteudo-inicial h1 {
@@ -458,7 +485,7 @@ body {
 
     .redes-sociais {
         justify-content: center;
-        margin-top: 30px;
+        margin-top: 40px;
     }
 }
 
@@ -480,14 +507,23 @@ body {
         line-height: 1;
     }
 
+    .area-inicial {
+        padding-top: 160px;
+        padding-bottom: 50px;
+    }
+
     .foto-perfil {
-        margin-bottom: 25px;
+        margin-bottom: 35px;
         padding: 8px;
     }
 
     .foto-perfil img {
         width: 180px;
         height: 180px;
+    }
+
+    .conteudo-inicial {
+        margin-top: 50px;
     }
 
     .conteudo-inicial h1 {
@@ -510,6 +546,7 @@ body {
 
     .redes-sociais {
         gap: 12px;
+        margin-top: 45px;
     }
 
     .botao-rede {
@@ -524,12 +561,20 @@ body {
 
 @media (max-width: 480px) {
     .area-inicial {
-        padding: 15px;
+        padding: 180px 15px 60px;
+    }
+
+    .foto-perfil {
+        margin-bottom: 40px;
     }
 
     .foto-perfil img {
         width: 160px;
         height: 160px;
+    }
+
+    .conteudo-inicial {
+        margin-top: 60px;
     }
 
     .conteudo-inicial h1 {
@@ -542,5 +587,9 @@ body {
 
     .texto-digitando {
         font-size: 1.5rem;
+    }
+
+    .redes-sociais {
+        margin-top: 50px;
     }
 }
