@@ -232,35 +232,157 @@
     transition-delay: 1.6s;
 }
 
-@media (max-width: 1024px) {
+/* Desktop extra grande (1921px+) */
+@media (min-width: 1921px) {
+    .about {
+        padding: 100px 8%;
+    }
+    
     .secao-sobre-conteudo {
-        flex-direction: column;
-        gap: 40px;
-        margin-left: 20px;
-        margin-right: 20px;
-        align-items: center;
+        max-width: 1800px;
+        margin: 100px auto 0;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 0 8%;
     }
     
     .container-estatisticas {
-        max-width: 100%;
-        width: 100%;
-        order: 2; 
-    }
-    
-    .texto-sobre {
-        max-width: 100%;
-        order: 1;
+        max-width: 750px !important;
+        width: 750px !important;
     }
     
     .cartao-estatistica {
-        min-width: auto;
-        width: 100%;
+        min-width: 720px !important;
+        padding: 25px 35px;
+        height: 110px;
     }
 }
 
-@media (max-width: 768px) {
+/* Desktop grande (1441px - 1920px) */
+@media (max-width: 1920px) and (min-width: 1441px) {
     .about {
-        padding: 60px 15px;
+        padding: 90px 6%;
+    }
+    
+    .secao-sobre-conteudo {
+        max-width: 1600px;
+        margin: 90px auto 0;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 0 6%;
+    }
+    
+    .container-estatisticas {
+        max-width: 700px !important;
+        width: 700px !important;
+    }
+    
+    .cartao-estatistica {
+        min-width: 670px !important;
+        height: 100px;
+    }
+}
+
+/* Desktop médio-grande (1201px - 1440px) */
+@media (max-width: 1440px) and (min-width: 1201px) {
+    .about {
+        padding: 80px 5%;
+    }
+    
+    .secao-sobre-conteudo {
+        max-width: 1400px;
+        margin: 80px auto 0;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 0 5%;
+        gap: 50px;
+    }
+    
+    .container-estatisticas {
+        max-width: 600px !important;
+        width: 600px !important;
+    }
+    
+    .cartao-estatistica {
+        min-width: 570px !important;
+        padding: 18px 28px;
+    }
+    
+    .texto-sobre {
+        max-width: 480px;
+    }
+}
+
+/* Desktop médio (1025px - 1200px) */
+@media (max-width: 1200px) and (min-width: 1025px) {
+    .about {
+        padding: 80px 4%;
+    }
+    
+    .about h2 {
+        font-size: 3.2rem;
+    }
+    
+    .secao-sobre-conteudo {
+        margin: 70px auto 0;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 0 4%;
+        gap: 40px;
+    }
+    
+    .container-estatisticas {
+        max-width: 550px !important;
+        width: 550px !important;
+        gap: 18px;
+    }
+    
+    .cartao-estatistica {
+        min-width: 520px !important;
+        padding: 16px 25px;
+        height: 90px;
+        gap: 20px;
+    }
+    
+    .icone-estatistica {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .icone-estatistica i {
+        font-size: 1.4rem;
+    }
+    
+    .numero-estatistica {
+        font-size: 1.8rem;
+    }
+    
+    .texto-estatistica {
+        left: 180px;
+    }
+    
+    .titulo-estatistica {
+        font-size: 0.85rem;
+    }
+    
+    .descricao-estatistica {
+        font-size: 0.7rem;
+    }
+    
+    .texto-sobre {
+        max-width: 450px;
+        gap: 18px;
+    }
+    
+    .paragrafo-sobre {
+        font-size: 0.98rem;
+    }
+}
+
+/* Tablet landscape (769px - 1024px) */
+@media (max-width: 1024px) and (min-width: 769px) {
+    .about {
+        padding: 70px 40px;
     }
     
     .about h2 {
@@ -268,22 +390,204 @@
     }
     
     .secao-sobre-conteudo {
-        margin-top: 60px;
-        gap: 35px;
+        flex-direction: column;
+        gap: 50px;
+        margin: 60px auto 0;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 0 40px;
+        align-items: center;
+        text-align: center;
     }
     
     .container-estatisticas {
+        max-width: 100% !important;
+        width: 100% !important;
+        order: 2;
+        gap: 16px;
+    }
+    
+    .cartao-estatistica {
+        min-width: auto !important;
+        width: 100% !important;
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 15px 22px;
+        height: 85px;
+        gap: 18px;
+        transform: translateY(-30px);
+    }
+    
+    .about.show .cartao-estatistica:nth-child(1) {
+        opacity: 1;
+        transform: translateY(0);
+        transition-delay: 1.4s;
+    }
+
+    .about.show .cartao-estatistica:nth-child(2) {
+        opacity: 1;
+        transform: translateY(0);
+        transition-delay: 1.6s;
+    }
+
+    .about.show .cartao-estatistica:nth-child(3) {
+        opacity: 1;
+        transform: translateY(0);
+        transition-delay: 1.8s;
+    }
+    
+    .icone-estatistica {
+        width: 38px;
+        height: 38px;
+    }
+    
+    .icone-estatistica i {
+        font-size: 1.3rem;
+    }
+    
+    .numero-estatistica {
+        font-size: 1.7rem;
+    }
+    
+    .texto-estatistica {
+        position: relative;
+        left: auto;
+        top: auto;
+        transform: none;
+        flex: 1;
+    }
+    
+    .titulo-estatistica {
+        font-size: 0.8rem;
+    }
+    
+    .descricao-estatistica {
+        font-size: 0.68rem;
+    }
+    
+    .texto-sobre {
+        order: 1;
+        max-width: 100%;
+        gap: 16px;
+        text-align: center;
+    }
+    
+    .paragrafo-sobre {
+        font-size: 0.96rem;
+        text-align: center;
+    }
+    
+    .about.show .paragrafo-sobre:nth-child(1) {
+        opacity: 1;
+        transform: translateY(0);
+        transition-delay: 1.2s;
+    }
+
+    .about.show .paragrafo-sobre:nth-child(2) {
+        opacity: 1;
+        transform: translateY(0);
+        transition-delay: 1.4s;
+    }
+}
+
+/* Tablet portrait (481px - 768px) */
+@media (max-width: 768px) {
+    .about {
+        padding: 60px 20px;
+    }
+    
+    .about h2 {
+        font-size: 2.5rem;
+    }
+    
+    .secao-sobre-conteudo {
+        flex-direction: column;
+        gap: 40px;
+        margin: 50px auto 0;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 0 20px;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .container-estatisticas {
+        max-width: 100% !important;
+        width: 100% !important;
         gap: 15px;
         order: 2;
     }
     
     .cartao-estatistica {
-        padding: 18px 25px;
-        height: 85px;
-        gap: 20px;
-        min-width: auto;
-        width: 100%;
+        min-width: auto !important;
+        width: 100% !important;
+        padding: 15px 20px;
+        height: 80px;
+        gap: 15px;
         transform: translateY(-30px);
+    }
+    
+    .about.show .cartao-estatistica:nth-child(1) {
+        opacity: 1;
+        transform: translateY(0);
+        transition-delay: 1.5s;
+    }
+
+    .about.show .cartao-estatistica:nth-child(2) {
+        opacity: 1;
+        transform: translateY(0);
+        transition-delay: 1.7s;
+    }
+
+    .about.show .cartao-estatistica:nth-child(3) {
+        opacity: 1;
+        transform: translateY(0);
+        transition-delay: 1.9s;
+    }
+    
+    .icone-estatistica {
+        width: 35px;
+        height: 35px;
+    }
+    
+    .icone-estatistica i {
+        font-size: 1.2rem;
+    }
+    
+    .conteudo-estatistica {
+        gap: 12px;
+    }
+    
+    .numero-estatistica {
+        font-size: 1.6rem;
+    }
+    
+    .texto-estatistica {
+        position: relative;
+        left: auto;
+        top: auto;
+        transform: none;
+        flex: 1;
+    }
+    
+    .titulo-estatistica {
+        font-size: 0.78rem;
+    }
+    
+    .descricao-estatistica {
+        font-size: 0.65rem;
+    }
+    
+    .texto-sobre {
+        order: 1;
+        max-width: 100%;
+        gap: 15px;
+        margin-top: 10px;
+    }
+    
+    .paragrafo-sobre {
+        font-size: 0.94rem;
+        text-align: center;
     }
     
     .about.show .paragrafo-sobre:nth-child(1) {
@@ -297,75 +601,101 @@
         transform: translateY(0);
         transition-delay: 1.3s;
     }
-    
-    .about.show .cartao-estatistica:nth-child(1) {
-        opacity: 1;
-        transform: translateY(0);
-        transition-delay: 1.6s;
-    }
+}
 
-    .about.show .cartao-estatistica:nth-child(2) {
-        opacity: 1;
-        transform: translateY(0);
-        transition-delay: 1.8s;
-    }
-
-    .about.show .cartao-estatistica:nth-child(3) {
-        opacity: 1;
-        transform: translateY(0);
-        transition-delay: 2.0s;
+/* Mobile grande (481px - 600px) */
+@media (max-width: 600px) and (min-width: 481px) {
+    .about {
+        padding: 50px 15px;
     }
     
-    .conteudo-estatistica {
-        gap: 15px;
+    .about h2 {
+        font-size: 2.2rem;
+    }
+    
+    .secao-sobre-conteudo {
+        margin: 40px auto 0;
+        gap: 35px;
+        padding: 0 15px;
+    }
+    
+    .container-estatisticas {
+        max-width: 100% !important;
+        width: 100% !important;
+        gap: 12px;
+    }
+    
+    .cartao-estatistica {
+        min-width: auto !important;
+        width: 100% !important;
+        padding: 12px 18px;
+        height: 70px;
+        gap: 12px;
+        border-radius: 10px;
+    }
+    
+    .icone-estatistica {
+        width: 32px;
+        height: 32px;
+        border-radius: 8px;
+    }
+    
+    .icone-estatistica i {
+        font-size: 1.1rem;
     }
     
     .numero-estatistica {
-        font-size: 1.8rem;
-    }
-    
-    .titulo-estatistica {
-        font-size: 0.85rem;
-    }
-    
-    .descricao-estatistica {
-        font-size: 0.72rem;
+        font-size: 1.4rem;
     }
     
     .texto-estatistica {
-        left: 170px;
+        position: relative;
+        left: auto;
+        top: auto;
+        transform: none;
+        flex: 1;
     }
     
-    .texto-sobre {
-        order: 1; 
-        gap: 15px;
-        text-align: center;
+    .titulo-estatistica {
+        font-size: 0.75rem;
+        letter-spacing: 0.3px;
+    }
+    
+    .descricao-estatistica {
+        font-size: 0.6rem;
     }
     
     .paragrafo-sobre {
-        font-size: 0.95rem;
-        text-align: center;
+        font-size: 0.9rem;
+        line-height: 1.6;
     }
 }
 
+/* Mobile médio (320px - 480px) */
 @media (max-width: 480px) {
     .about {
-        padding: 40px 10px;
+        padding: 40px 15px;
     }
     
     .about h2 {
         font-size: 2rem;
+        margin-bottom: 10px;
+    }
+    
+    .about h2::after {
+        width: 60px;
+        height: 3px;
+        margin: 15px auto 0;
     }
     
     .secao-sobre-conteudo {
-        margin-top: 40px;
+        margin: 30px auto 0;
         gap: 25px;
-        margin-left: 0;
-        margin-right: 0;
+        padding: 0 15px;
     }
     
     .container-estatisticas {
-        gap: 8px;
+        gap: 10px;
         order: 2;
         padding: 0;
         max-width: 100% !important;
@@ -373,10 +703,10 @@
     }
     
     .cartao-estatistica {
-        gap: 8px;
-        padding: 8px 12px;
-        height: 50px;
-        border-radius: 6px;
+        gap: 10px;
+        padding: 10px 15px;
+        height: 60px;
+        border-radius: 8px;
         border-width: 2px;
         min-width: auto !important;
         width: 100% !important;
@@ -384,12 +714,12 @@
     }
     
     .cartao-estatistica:hover {
-        transform: scale(1.01);
+        transform: scale(1.02);
     }
     
     .icone-estatistica {
-        width: 28px;
-        height: 28px;
+        width: 30px;
+        height: 30px;
         border-radius: 6px;
     }
     
@@ -398,12 +728,12 @@
     }
     
     .conteudo-estatistica {
-        gap: 8px;
+        gap: 10px;
         flex: 1;
     }
     
     .numero-estatistica {
-        font-size: 1.1rem;
+        font-size: 1.2rem;
         min-width: 40px;
     }
     
@@ -416,12 +746,12 @@
     }
     
     .titulo-estatistica {
-        font-size: 0.65rem;
+        font-size: 0.7rem;
         letter-spacing: 0.2px;
     }
     
     .descricao-estatistica {
-        font-size: 0.55rem;
+        font-size: 0.58rem;
     }
     
     .texto-sobre {
@@ -431,14 +761,73 @@
     }
     
     .paragrafo-sobre {
-        font-size: 0.85rem;
+        font-size: 0.86rem;
         line-height: 1.5;
+        text-align: center;
     }
 }
 
+/* Mobile pequeno (até 360px) */
 @media (max-width: 360px) {
     .about {
-        padding: 30px 8px;
+        padding: 30px 10px;
+    }
+    
+    .about h2 {
+        font-size: 1.8rem;
+    }
+    
+    .container-estatisticas {
+        gap: 8px;
+    }
+    
+    .cartao-estatistica {
+        padding: 8px 12px;
+        height: 55px;
+        gap: 8px;
+    }
+    
+    .icone-estatistica {
+        width: 26px;
+        height: 26px;
+    }
+    
+    .icone-estatistica i {
+        font-size: 0.9rem;
+    }
+    
+    .numero-estatistica {
+        font-size: 1.1rem;
+        min-width: 35px;
+    }
+    
+    .titulo-estatistica {
+        font-size: 0.65rem;
+        letter-spacing: 0.1px;
+    }
+    
+    .descricao-estatistica {
+        font-size: 0.52rem;
+    }
+    
+    .conteudo-estatistica {
+        gap: 8px;
+    }
+    
+    .paragrafo-sobre {
+        font-size: 0.82rem;
+        line-height: 1.4;
+    }
+}
+
+/* Mobile extra pequeno (até 319px) */
+@media (max-width: 319px) {
+    .about {
+        padding: 25px 8px;
+    }
+    
+    .about h2 {
+        font-size: 1.6rem;
     }
     
     .container-estatisticas {
@@ -447,7 +836,7 @@
     
     .cartao-estatistica {
         padding: 6px 10px;
-        height: 45px;
+        height: 50px;
         gap: 6px;
     }
     
@@ -457,24 +846,23 @@
     }
     
     .icone-estatistica i {
-        font-size: 0.85rem;
+        font-size: 0.8rem;
     }
     
     .numero-estatistica {
         font-size: 1rem;
-        min-width: 35px;
+        min-width: 30px;
     }
     
     .titulo-estatistica {
         font-size: 0.6rem;
-        letter-spacing: 0.1px;
     }
     
     .descricao-estatistica {
-        font-size: 0.5rem;
+        font-size: 0.48rem;
     }
     
-    .conteudo-estatistica {
-        gap: 6px;
+    .paragrafo-sobre {
+        font-size: 0.8rem;
     }
 }
