@@ -3,32 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portifolio</title>
+    <title>Vitor Vieira</title>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="/css/home.css">
     <link rel="stylesheet" href="/css/sobre.css">
     <link rel="stylesheet" href="/css/experiencia.css">
     <link rel="stylesheet" href="/css/projetos.css">
     <link rel="stylesheet" href="/css/competencia.css">
+    <link rel="stylesheet" href="/css/navbar.css">
 </head>
 <body>
-    <nav class="barra-navegacao">
-        <div class="logotipo">VitorVieira</div>
-        <ul class="menu-navegacao">
-            <li class="item-navegacao">
-                <a href="#home" class="link-navegacao ativo">Home</a>
-            </li>
-            <li class="item-navegacao">
-                <a href="#sobre" class="link-navegacao">Sobre</a>
-            </li>
-            <li class="item-navegacao">
-                <a href="#projetos" class="link-navegacao">Projetos</a>
-            </li>
-            <li class="item-navegacao">
-                <a href="#contato" class="link-navegacao">Contato</a>
-            </li>
-        </ul>
-    </nav>
+  <nav class="barra-navegacao">
+    <div class="logotipo">VitorVieira</div>
+    <button class="botao-hamburguer" id="botaoHamburguer">
+        <span class="linha-hamburguer"></span>
+        <span class="linha-hamburguer"></span>
+        <span class="linha-hamburguer"></span>
+    </button>
+    <ul class="menu-navegacao" id="menuNavegacao">
+        <li class="item-navegacao">
+            <a href="#home" class="link-navegacao ativo">Home</a>
+        </li>
+        <li class="item-navegacao">
+            <a href="#sobre" class="link-navegacao">Sobre</a>
+        </li>
+        <li class="item-navegacao">
+            <a href="#projetos" class="link-navegacao">Projetos</a>
+        </li>
+        <li class="item-navegacao">
+            <a href="#contato" class="link-navegacao">Contato</a>
+        </li>
+    </ul>
+</nav>
 
     <section id="home" class="home">
         <div class="area-inicial">
@@ -385,6 +391,7 @@
   <script src="/js/home.js"></script>
   <script src="/js/sobre.js"></script>
   <script src="/js/experiencia.js"></script>
+  <script src="/js/navbar.js"></script>
   
 </body>
 </html>
