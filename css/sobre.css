@@ -258,7 +258,6 @@
     }
 }
 
-/* Desktop grande (1441px - 1920px) */
 @media (max-width: 1920px) and (min-width: 1441px) {
     .about {
         padding: 90px 6%;
@@ -270,6 +269,7 @@
         margin-left: auto;
         margin-right: auto;
         padding: 0 6%;
+        gap: 120px;
     }
     
     .container-estatisticas {
@@ -280,6 +280,22 @@
     .cartao-estatistica {
         min-width: 670px !important;
         height: 100px;
+    }
+    
+    .numero-estatistica {
+        font-size: 2.3rem;
+    }
+    
+    .titulo-estatistica {
+        font-size: 1.05rem;
+    }
+    
+    .descricao-estatistica {
+        font-size: 0.88rem;
+    }
+    
+    .paragrafo-sobre {
+        font-size: 1.15rem;
     }
 }
 
