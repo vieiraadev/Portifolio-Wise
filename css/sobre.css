@@ -258,6 +258,7 @@
     }
 }
 
+/* Desktop grande (1441px - 1920px) */
 @media (max-width: 1920px) and (min-width: 1441px) {
     .about {
         padding: 90px 6%;
