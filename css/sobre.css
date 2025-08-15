@@ -258,45 +258,46 @@
     }
 }
 
-/* Desktop grande (1441px - 1920px) */
-@media (max-width: 1920px) and (min-width: 1441px) {
+/* Desktop grande - (1681px - 1920px) */
+@media (max-width: 1920px) and (min-width: 1681px) {
     .about {
-        padding: 90px 6%;
+        padding: 95px 7%;
     }
     
     .secao-sobre-conteudo {
-        max-width: 1600px;
-        margin: 90px auto 0;
+        max-width: 1700px;
+        margin: 95px auto 0;
         margin-left: auto;
         margin-right: auto;
-        padding: 0 6%;
-        gap: 120px;
+        padding: 0 7%;
+        gap: 100px;
     }
     
     .container-estatisticas {
-        max-width: 700px !important;
-        width: 700px !important;
+        max-width: 720px !important;
+        width: 720px !important;
     }
     
     .cartao-estatistica {
-        min-width: 670px !important;
-        height: 100px;
+        min-width: 690px !important;
+        padding: 23px 32px;
+        height: 105px;
     }
     
     .numero-estatistica {
-        font-size: 2.3rem;
+        font-size: 2.2rem;
     }
     
     .titulo-estatistica {
-        font-size: 1.05rem;
+        font-size: 1.0rem;
     }
     
     .descricao-estatistica {
-        font-size: 0.88rem;
+        font-size: 0.85rem;
     }
     
     .paragrafo-sobre {
-        font-size: 1.15rem;
+        font-size: 1.1rem;
     }
 }
 
