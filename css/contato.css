@@ -1,0 +1,306 @@
+.contato {
+    background-color: #000;
+    color: #fff;
+    padding: 80px 20px;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transform: translateY(80px) scale(0.95);
+    transition: opacity 0.8s ease-out, transform 1s cubic-bezier(0.25, 1, 0.5, 1);
+    animation: animacaoEntrada 1s ease-out forwards;
+}
+
+@keyframes animacaoEntrada {
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.container-contato {
+    max-width: 1400px;
+    width: 100%;
+    display: flex;
+    gap: 80px;
+    align-items: flex-start;
+}
+
+.conteudo-contato {
+    flex: 1;
+    max-width: 650px;
+}
+
+.contato h2 {
+    font-size: 4rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, #007bff, #0056b3, #004085);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+    margin-bottom: 30px;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: deslizarEsquerda 0.8s ease-out 0.4s forwards;
+}
+
+@keyframes deslizarEsquerda {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.contato h2::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: #0056b3;
+    margin: 20px 0;
+    border-radius: 2px;
+    opacity: 0;
+    transform: scaleX(0);
+    animation: escalarX 0.5s ease-out 1.2s forwards;
+}
+
+@keyframes escalarX {
+    to {
+        opacity: 1;
+        transform: scaleX(1);
+    }
+}
+
+.mensagem-contato {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: deslizarEsquerda 0.6s ease-out 1.4s forwards;
+}
+
+.mensagem-contato h3 {
+    font-size: 2.2rem;
+    color: #007bff;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.mensagem-contato p {
+    font-size: 1.3rem;
+    color: #ccc;
+    margin-bottom: 20px;
+    line-height: 1.7;
+}
+
+.destaque-email {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: linear-gradient(135deg, rgba(0, 123, 255, 0.1), rgba(0, 86, 179, 0.15));
+    border: 2px solid #0056b3;
+    border-radius: 10px;
+    padding: 15px 20px;
+    margin-top: 10px;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.destaque-email:hover {
+    border-color: #007bff;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 123, 255, 0.3);
+}
+
+.destaque-email i {
+    color: #007bff;
+    font-size: 1.2rem;
+}
+
+.destaque-email span {
+    color: #fff;
+    font-weight: 600;
+    font-size: 1.3rem;
+}
+
+.container-formulario {
+    flex: 1;
+    max-width: 650px;
+    opacity: 0;
+    transform: translateX(50px);
+    animation: deslizarDireita 0.8s ease-out 1.6s forwards;
+}
+
+@keyframes deslizarDireita {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.formulario-contato {
+    background: linear-gradient(135deg, rgba(0, 123, 255, 0.05), rgba(0, 86, 179, 0.08));
+    border: 2px solid #0056b3;
+    border-radius: 15px;
+    padding: 40px;
+    backdrop-filter: blur(10px);
+    position: relative;
+    overflow: hidden;
+}
+
+.formulario-contato::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #007bff, #0056b3);
+    border-radius: 15px 15px 0 0;
+}
+
+.grupo-campo {
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.grupo-campo label {
+    display: block;
+    color: #007bff;
+    font-weight: 600;
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.grupo-campo input,
+.grupo-campo textarea {
+    width: 100%;
+    padding: 15px 20px;
+    background: rgba(0, 123, 255, 0.05);
+    border: 2px solid rgba(0, 86, 179, 0.3);
+    border-radius: 10px;
+    color: #fff;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    font-family: inherit;
+}
+
+.grupo-campo input:focus,
+.grupo-campo textarea:focus {
+    outline: none;
+    border-color: #007bff;
+    background: rgba(0, 123, 255, 0.1);
+    box-shadow: 0 0 20px rgba(0, 123, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+.grupo-campo textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.grupo-campo input::placeholder,
+.grupo-campo textarea::placeholder {
+    color: #999;
+}
+
+.botao-envio {
+    width: 100%;
+    padding: 18px;
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.botao-envio::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s ease;
+}
+
+.botao-envio:hover::before {
+    left: 100%;
+}
+
+.botao-envio:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(0, 123, 255, 0.4);
+}
+
+.botao-envio:active {
+    transform: translateY(-1px);
+}
+
+
+@media (max-width: 1024px) {
+    .container-contato {
+        flex-direction: column;
+        gap: 50px;
+        text-align: center;
+    }
+    
+    .contato h2 {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .contato {
+        padding: 60px 20px;
+    }
+    
+    .contato h2 {
+        font-size: 2.5rem;
+    }
+    
+    .container-contato {
+        gap: 40px;
+    }
+    
+    .formulario-contato {
+        padding: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .contato {
+        padding: 40px 15px;
+    }
+    
+    .contato h2 {
+        font-size: 2rem;
+    }
+    
+    .mensagem-contato h3 {
+        font-size: 1.5rem;
+    }
+    
+    .mensagem-contato p {
+        font-size: 1rem;
+    }
+    
+    .formulario-contato {
+        padding: 25px;
+    }
+    
+    .destaque-email {
+        flex-direction: column;
+        text-align: center;
+        gap: 8px;
+    }
+}
