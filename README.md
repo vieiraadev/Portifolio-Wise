@@ -1,4 +1,4 @@
-# 🌐 Portfólio Pessoal - Desenvolvedor  
+# 🌐 Portfólio Pessoal - Trainee Wise Systems
 
 Este projeto foi desenvolvido para o **processo de Trainee da Wise Intelligence**, com o objetivo de criar **uma página web que sirva como portfólio profissional**, destacando habilidades, projetos e experiências do desenvolvedor.  
 A proposta é apresentar as informações de forma clara, visualmente agradável e responsiva, utilizando tecnologias modernas e boas práticas de versionamento.  
