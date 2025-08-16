@@ -52,10 +52,10 @@
 }
 
 .container-contato {
-    max-width: 1400px;
+    max-width: 1500px;
     width: 100%;
     display: flex;
-    gap: 150px;
+    gap: 80px;
     align-items: flex-start;
     margin: 0 auto;
     justify-content: flex-start;
@@ -63,8 +63,8 @@
 }
 
 .conteudo-contato {
-    flex: 1;
-    max-width: 650px;
+    flex: 0.8;
+    max-width: 500px;
     text-align: left;
 }
 
@@ -199,8 +199,8 @@
 }
 
 .container-formulario {
-    flex: 1;
-    max-width: 650px;
+    flex: 1.2;
+    max-width: 800px;
     margin-top: 80px; 
     opacity: 0;
     transform: translateX(50px);
@@ -240,13 +240,21 @@
 }
 
 .grupo-campo label {
-    display: block;
+    display: flex;
+    align-items: center;
+    gap: 6px;
     color: #007bff;
     font-weight: 600;
     margin-bottom: 8px;
+    margin-left: 8px;
     font-size: 0.9rem;
     text-transform: uppercase;
     letter-spacing: 0.5px;
+}
+
+.grupo-campo label i {
+    color: #007bff;
+    font-size: 1rem;
 }
 
 .grupo-campo input,
