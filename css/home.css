@@ -203,6 +203,29 @@ body {
     animation: fadeInScroll 1s ease-out 2.5s forwards;
     cursor: pointer;
     z-index: 10;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.scroll-indicator.hidden {
+    opacity: 0 !important;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateX(-50%) translateY(20px) scale(0.8);
+}
+
+.scroll-indicator.fade-out {
+    animation: fadeOutScroll 0.4s ease-in forwards;
+}
+
+@keyframes fadeOutScroll {
+    0% {
+        transform: translateX(-50%) translateY(0) scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(-50%) translateY(20px) scale(0.8);
+        opacity: 0;
+    }
 }
 
 .scroll-text {
@@ -238,7 +261,6 @@ body {
     animation: scrollBounce 2s infinite ease-in-out;
     box-shadow: 0 0 12px rgba(0, 123, 255, 0.5);
 }
-
 
 .scroll-indicator:hover .scroll-container {
     border-color: #007bff;

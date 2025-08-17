@@ -2,6 +2,7 @@ const textos = ["Trainee na Wise Systems", "Engenheiro de software"];
 let textoAtual = 0;
 let caracterAtual = 0;
 let deletando = false;
+let scrollIndicatorHidden = false;
 
 function digitarTexto() {
     const elemento = document.getElementById("texto");
@@ -16,7 +17,6 @@ function digitarTexto() {
     }
     
     let velocidade = 100;
-    
     if (deletando) {
         velocidade /= 2;
     }
@@ -32,5 +32,22 @@ function digitarTexto() {
     
     setTimeout(digitarTexto, velocidade);
 }
+
+window.addEventListener('scroll', function() {
+    const scrollIndicator = document.querySelector('.scroll-indicator');
+    
+    if (scrollIndicator && window.scrollY > 0 && !scrollIndicatorHidden) {
+        scrollIndicatorHidden = true;
+        scrollIndicator.classList.add('fade-out');
+
+        setTimeout(() => {
+            scrollIndicator.classList.add('hidden');
+        }, 400);
+        
+    } else if (scrollIndicator && window.scrollY === 0 && scrollIndicatorHidden) {
+        scrollIndicatorHidden = false;
+        scrollIndicator.classList.remove('hidden', 'fade-out');
+    }
+});
 
 setTimeout(digitarTexto, 3500);
