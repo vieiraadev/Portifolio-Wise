@@ -335,6 +335,7 @@ body {
     .area-inicial {
         max-width: 1800px;
         padding: 0 8%;
+        margin: -60px auto 0;
     }
     
     .foto-perfil {
@@ -352,6 +353,7 @@ body {
     .area-inicial {
         max-width: 1600px;
         padding: 0 6%;
+        margin: -60px auto 0;
     }
     
     .foto-perfil {
@@ -364,7 +366,7 @@ body {
     .area-inicial {
         max-width: 1400px;
         padding: 0 5%;
-        margin: -40px auto 0;
+        margin: -60px auto 0;
     }
     
     .foto-perfil {
@@ -376,7 +378,7 @@ body {
 @media (max-width: 1200px) and (min-width: 1025px) {
     .area-inicial {
         padding: 0 4%;
-        margin: -50px auto 0;
+        margin: -60px auto 0;
     }
     
     .foto-perfil {
