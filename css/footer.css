@@ -1,5 +1,5 @@
 .rodape {
-    background: #000; 
+    background: #000;
     padding: 30px 20px;
     text-align: center;
     margin-top: auto;
@@ -11,31 +11,81 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px;
-}
-
-.copyright {
-    font-size: 0.8rem;
-    color: #666;
-    border-top: 1px solid #222;
-    padding-top: 15px;
-    margin-top: 20px;
+    gap: 6px;
 }
 
 .frase-impacto {
     font-size: 1.5rem;
     font-weight: 500;
     color: #0a66c2;
-    margin-bottom: 4px;
+    margin-bottom: 0;
     text-align: center;
+}
+
+.social-links {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    align-items: center;
+    margin: 4px 0;
+}
+
+.social-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    color: #666;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    border-radius: 8px;
+    position: relative;
+}
+
+.social-link i {
+    font-size: 20px;
+    transition: all 0.2s ease;
+}
+
+.social-link:hover {
+    transform: translateY(-2px);
+}
+
+.social-link.linkedin:hover {
+    color: #0a66c2;
+}
+
+.social-link.github:hover {
+    color: #fff;
+}
+
+.social-link.instagram:hover {
+    color: #e4405f;
+}
+
+.social-link.twitter:hover {
+    color: #1da1f2;
+}
+
+.social-link.email:hover {
+    color: #ea4335;
+}
+
+.social-link.whatsapp:hover {
+    color: #25d366;
+}
+
+.social-link.portfolio:hover {
+    color: #ff6b35;
 }
 
 .copyright {
     font-size: 0.85rem;
     color: #666;
-    border-top: none;     
-    padding-top: 0;        
-    margin-top: 0;        
+    border-top: 1px solid #222;
+    padding-top: 8px;
+    margin-top: 6px;
 }
 
 .ano {
