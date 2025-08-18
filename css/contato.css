@@ -20,7 +20,7 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     display: inline-block;
-    margin-bottom: 60px;
+    margin: 0 auto 60px auto;
     text-align: center;
     width: 100%;
     opacity: 0;
@@ -52,20 +52,97 @@
 }
 
 .container-contato {
-    max-width: 1500px;
+    max-width: 1200px;  
     width: 100%;
     display: flex;
-    gap: 80px;
+    gap: 120px;           
     align-items: flex-start;
-    margin: 0 auto;
-    justify-content: flex-start;
-    padding-left: 50px;
+    margin: 0 auto;      
+    justify-content: flex-start; 
+    padding: 0 30px;
 }
 
+
 .conteudo-contato {
-    flex: 0.8;
-    max-width: 500px;
-    text-align: left;
+    max-width: 480px;
+    margin: 0; 
+    padding: 60px 20px;
+    margin-top: -40px;
+    flex: 0 1 480px;
+}
+
+.mensagem-contato h3 {
+    font-size: 2.5rem;
+    font-weight: 300;
+    color: #fff;
+    margin-bottom: 12px;
+    letter-spacing: -0.02em;
+}
+
+.mensagem-contato p {
+    font-size: 1.1rem;
+    color: #888;
+    margin-bottom: 8px;
+    font-weight: 400;
+}
+
+.mensagem-contato p strong {
+    color: #fff;
+    font-weight: 500;
+}
+
+.contact-info {
+    margin-top: 48px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 20px 0;
+    border-bottom: 1px solid #222;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.contact-item:hover {
+    border-bottom-color: #444;
+}
+
+.contact-item:last-child {
+    border-bottom: none;
+}
+
+.contact-icon {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-icon i {
+    font-size: 20px;
+    color: #666;
+    transition: color 0.2s ease;
+}
+
+.contact-item:hover .contact-icon i {
+    color: #fff;
+}
+
+.contact-text {
+    font-size: 1.1rem;
+    color: #ccc;
+    font-weight: 400;
+    transition: color 0.2s ease;
+}
+
+.contact-item:hover .contact-text {
+    color: #fff;
 }
 
 .mensagem-contato {
@@ -199,8 +276,9 @@
 }
 
 .container-formulario {
-    flex: 1.2;
-    max-width: 800px;
+    flex: 1 1 600px;
+    max-width: 700px;
+    margin: 0;
     margin-top: 80px; 
     opacity: 0;
     transform: translateX(50px);
@@ -333,7 +411,7 @@
 @media (max-width: 1024px) {
     .container-contato {
         flex-direction: column;
-        gap: 50px;
+        gap: 40px;
     }
     
     .container-formulario {
@@ -363,7 +441,7 @@
     }
     
     .container-contato {
-        gap: 40px;
+        gap: 30px;
     }
     
     .formulario-contato {
