@@ -1,0 +1,24 @@
+.rodape {
+    background: #000;
+    border-top: 1px solid #0056b3;
+    padding: 5px 20px;
+    text-align: center;
+    margin: 0;
+    width: 100%;
+}
+
+.copyright {
+    font-size: 0.9rem;
+    color: #cfcfcf;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .rodape {
+        padding: 4px 15px;
+    }
+    
+    .copyright {
+        font-size: 0.85rem;
+    }
+}
