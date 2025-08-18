@@ -24,6 +24,7 @@ body {
     background-color: #000;
     max-width: 1400px;
     margin: -40px auto 0;
+    position: relative;
 }
 
 .conteudo-inicial {
@@ -109,7 +110,9 @@ body {
 
 .redes-sociais {
     display: flex;
+    flex-direction: row;
     align-items: center;
+    justify-content: flex-start;
     gap: 16px;
     margin-top: 24px;
 }
@@ -117,7 +120,7 @@ body {
 .botao-rede {
     width: 56px;
     height: 56px;
-    margin-top: 1rem;
+    margin-top: 0;
     border-radius: 50%;
     display: grid;
     place-items: center;
@@ -353,120 +356,98 @@ body {
     50% { opacity: 0; }
 }
 
-/* Desktop grande (1921px+) */
-@media (min-width: 1921px) {
+/* Desktop grande (1201px+) - Layout horizontal */
+@media (min-width: 1201px) {
     .area-inicial {
-        max-width: 1800px;
-        padding: 0 8%;
-        margin: -60px auto 0;
-    }
-    
-    .foto-perfil {
-        margin-left: 80px;
-    }
-    
-    .foto-perfil img {
-        width: 450px;
-        height: 450px;
-    }
-}
-
-/* Desktop extra grande (1441px - 1920px) */
-@media (max-width: 1920px) and (min-width: 1441px) {
-    .area-inicial {
-        max-width: 1600px;
-        padding: 0 6%;
-        margin: -60px auto 0;
-    }
-    
-    .foto-perfil {
-        margin-left: 60px;
-    }
-}
-
-/* Desktop grande (1201px - 1440px) */
-@media (max-width: 1440px) and (min-width: 1201px) {
-    .area-inicial {
-        max-width: 1400px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        min-height: 100vh;
         padding: 0 5%;
+        background-color: #000;
+        max-width: 1400px;
         margin: -60px auto 0;
+        position: relative;
+        text-align: left;
     }
     
     .foto-perfil {
+        flex-shrink: 0;
         margin-left: 40px;
-    }
-}
-
-/* Desktop médio (1025px - 1200px) */
-@media (max-width: 1200px) and (min-width: 1025px) {
-    .area-inicial {
-        padding: 0 4%;
-        margin: -60px auto 0;
-    }
-    
-    .foto-perfil {
-        margin-left: 30px;
+        opacity: 0;
+        animation: fadeInPhoto 0.7s ease-out 1.0s forwards;
+        border: 3px solid #0a66c2;
+        padding: 20px;
+        order: 2;
+        position: static;
     }
     
     .foto-perfil img {
-        width: 350px;
-        height: 350px;
+        width: 400px;
+        height: 400px;
     }
     
     .conteudo-inicial {
-        max-width: 550px;
-    }
-    
-    .conteudo-inicial h1 {
-        font-size: 2.8rem;
-    }
-    
-    .conteudo-inicial h3 {
-        font-size: 2rem;
+        flex: 1;
+        max-width: 600px;
+        position: relative;
+        order: 1;
     }
 }
 
-/* Tablet landscape (769px - 1024px) */
-@media (max-width: 1024px) and (min-width: 769px) {
+/* Tablets e dispositivos menores (até 1200px) - Layout vertical */
+@media (max-width: 1200px) {
     .area-inicial {
-        flex-direction: column;
+        display: flex !important;
+        flex-direction: column !important;
         justify-content: center;
-        padding: 100px 40px 60px;
+        padding: 80px 40px 60px;
         text-align: center;
         margin: 0 auto;
         min-height: 100vh;
+        align-items: center;
     }
-
+    
     .foto-perfil {
-        position: static;
-        margin: 0 0 40px 0;
-        order: -1;
+        position: static !important;
+        margin: 0 0 40px 0 !important;
+        order: -1 !important;
         animation: fadeInPhotoMobile 0.7s ease-out 1.0s forwards;
         border: 3px solid #0a66c2;
         padding: 15px;
+        flex-shrink: 0;
     }
-
+    
     .foto-perfil img {
-        width: 250px;
-        height: 250px;
+        width: 280px !important;
+        height: 280px !important;
     }
-
+    
     .conteudo-inicial {
-        max-width: 100%;
+        max-width: 100% !important;
         margin-top: 20px;
+        order: 1;
+        flex: none;
     }
-
+    
     .conteudo-inicial h1 {
-        font-size: 2.8rem;
+        font-size: 2.6rem;
     }
-
+    
     .conteudo-inicial h3 {
-        font-size: 2rem;
+        font-size: 1.9rem;
     }
     
     .redes-sociais {
         justify-content: center;
         margin-top: 30px;
+        flex-direction: row !important;
+        flex-wrap: nowrap;
+    }
+    
+    .scroll-indicator {
+        display: none !important;
     }
 }
 
@@ -475,10 +456,10 @@ body {
     .area-inicial {
         flex-direction: column;
         justify-content: flex-start;
-        padding: 100px 20px 50px;
+        padding: 80px 20px 50px; 
         text-align: center;
         margin-top: 0;
-        min-height: calc(100vh - 60px);
+        min-height: 100vh;
     }
     
     .foto-perfil {
@@ -516,6 +497,8 @@ body {
         justify-content: center;
         margin-top: 25px;
         gap: 16px;
+        flex-direction: row !important;
+        flex-wrap: nowrap;
     }
     
     .botao-rede {
@@ -526,12 +509,16 @@ body {
     .botao-rede i {
         font-size: 22px;
     }
+    
+    .scroll-indicator {
+        display: none;
+    }
 }
 
 /* Mobile grande (481px - 600px) */
 @media (max-width: 600px) and (min-width: 481px) {
     .area-inicial {
-        padding-top: 120px;
+        padding-top: 100px;
         padding-bottom: 50px;
     }
 
@@ -570,6 +557,8 @@ body {
     .redes-sociais {
         gap: 12px;
         margin-top: 35px;
+        flex-direction: row !important;
+        flex-wrap: nowrap;
     }
 
     .botao-rede {
@@ -580,6 +569,10 @@ body {
     .botao-rede i {
         font-size: 20px;
     }
+    
+    .scroll-indicator {
+        display: none;
+    }
 }
 
 /* Mobile médio (320px - 480px) */
@@ -587,10 +580,10 @@ body {
     .area-inicial {
         flex-direction: column;
         justify-content: flex-start;
-        padding: 110px 15px 50px;
+        padding: 90px 15px 50px;
         text-align: center;
         margin-top: 0;
-        min-height: calc(100vh - 50px);
+        min-height: calc(100vh - 20px);
     }
 
     .foto-perfil {
@@ -609,7 +602,7 @@ body {
 
     .conteudo-inicial {
         max-width: 100%;
-        margin-top: 40px;
+        margin-top: 20px;
     }
 
     .conteudo-inicial h1 {
@@ -633,8 +626,10 @@ body {
 
     .redes-sociais {
         justify-content: center;
-        margin-top: 40px;
+        margin-top: 30px;
         gap: 12px;
+        flex-direction: row !important;
+        flex-wrap: nowrap;
     }
 
     .botao-rede {
@@ -645,12 +640,16 @@ body {
     .botao-rede i {
         font-size: 20px;
     }
+    
+    .scroll-indicator {
+        display: none;
+    }
 }
 
 /* Mobile pequeno (até 319px) */
 @media (max-width: 319px) {
     .area-inicial {
-        padding: 100px 10px 40px;
+        padding: 80px 10px 50px;
     }
 
     .foto-perfil img {
@@ -677,5 +676,9 @@ body {
 
     .botao-rede i {
         font-size: 18px;
+    }
+    
+    .scroll-indicator {
+        display: none;
     }
 }
