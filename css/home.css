@@ -109,12 +109,14 @@ body {
 }
 
 .redes-sociais {
-    display: flex;
-    flex-direction: row;
+    display: flex !important;
+    flex-direction: row !important;
     align-items: center;
     justify-content: flex-start;
     gap: 16px;
     margin-top: 24px;
+    position: static !important;
+    width: auto !important;
 }
 
 .botao-rede {
@@ -122,7 +124,7 @@ body {
     height: 56px;
     margin-top: 0;
     border-radius: 50%;
-    display: grid;
+    display: grid !important;
     place-items: center;
     text-decoration: none;
     border: 2px solid #007bff;
@@ -132,12 +134,14 @@ body {
     transition: transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease, color 0.2s ease, border-color 0.2s ease;
     opacity: 0;
     transform: translateY(30px) scale(0.8);
+    position: static !important;
+    flex-shrink: 0;
 }
 
-.botao-rede:nth-child(1) { animation: fadeInUpScale 0.5s ease-out 1.5s forwards; }
-.botao-rede:nth-child(2) { animation: fadeInUpScale 0.5s ease-out 1.6s forwards; }
-.botao-rede:nth-child(3) { animation: fadeInUpScale 0.5s ease-out 1.7s forwards; }
-.botao-rede:nth-child(4) { animation: fadeInUpScale 0.5s ease-out 1.8s forwards; }
+.botao-rede:nth-child(1) { animation: fadeInUpScale 0.5s ease-out 3.5s forwards; }
+.botao-rede:nth-child(2) { animation: fadeInUpScale 0.5s ease-out 3.7s forwards; }
+.botao-rede:nth-child(3) { animation: fadeInUpScale 0.5s ease-out 3.9s forwards; }
+.botao-rede:nth-child(4) { animation: fadeInUpScale 0.5s ease-out 4.1s forwards; }
 
 .botao-rede i {
     font-size: 24px;
@@ -204,7 +208,7 @@ body {
     align-items: center;
     gap: 8px;
     opacity: 0;
-    animation: fadeInScroll 1s ease-out 2.5s forwards;
+    animation: fadeInScroll 1s ease-out 4.5s forwards;
     cursor: pointer;
     z-index: 10;
     transition: opacity 0.3s ease, visibility 0.3s ease;
@@ -356,94 +360,73 @@ body {
     50% { opacity: 0; }
 }
 
-/* Desktop grande (1201px+) - Layout horizontal */
-@media (min-width: 1201px) {
-    .area-inicial {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-        min-height: 100vh;
-        padding: 0 5%;
-        background-color: #000;
-        max-width: 1400px;
-        margin: -60px auto 0;
-        position: relative;
-        text-align: left;
-    }
-    
-    .foto-perfil {
-        flex-shrink: 0;
-        margin-left: 40px;
-        opacity: 0;
-        animation: fadeInPhoto 0.7s ease-out 1.0s forwards;
-        border: 3px solid #0a66c2;
-        padding: 20px;
-        order: 2;
-        position: static;
-    }
-    
-    .foto-perfil img {
-        width: 400px;
-        height: 400px;
-    }
-    
-    .conteudo-inicial {
-        flex: 1;
-        max-width: 600px;
-        position: relative;
-        order: 1;
-    }
-}
-
-/* Tablets e dispositivos menores (até 1200px) - Layout vertical */
-@media (max-width: 1200px) {
+/* Tablets e Desktop médio (769px - 1440px) - Layout vertical centralizado */
+@media (min-width: 769px) and (max-width: 1440px) {
     .area-inicial {
         display: flex !important;
         flex-direction: column !important;
-        justify-content: center;
-        padding: 80px 40px 60px;
-        text-align: center;
-        margin: 0 auto;
+        align-items: center !important;
+        justify-content: center !important;
         min-height: 100vh;
-        align-items: center;
+        padding: 60px 40px !important;
+        text-align: center !important;
+        margin: 0 auto !important;
+        gap: 40px;
+        max-width: none !important;
     }
     
     .foto-perfil {
-        position: static !important;
-        margin: 0 0 40px 0 !important;
-        order: -1 !important;
-        animation: fadeInPhotoMobile 0.7s ease-out 1.0s forwards;
+        order: 1 !important;
+        margin: 0 !important;
+        margin-left: 0 !important;
+        margin-bottom: 0 !important;
+        opacity: 0;
+        animation: fadeInPhotoMobile 0.7s ease-out 1.0s forwards !important;
         border: 3px solid #0a66c2;
-        padding: 15px;
-        flex-shrink: 0;
+        padding: 20px;
+        position: static !important;
     }
     
     .foto-perfil img {
-        width: 280px !important;
-        height: 280px !important;
+        width: 300px !important;
+        height: 300px !important;
     }
     
     .conteudo-inicial {
+        order: 2 !important;
         max-width: 100% !important;
-        margin-top: 20px;
-        order: 1;
-        flex: none;
+        margin: 0 !important;
+        flex: none !important;
     }
     
     .conteudo-inicial h1 {
-        font-size: 2.6rem;
+        font-size: 2.8rem !important;
     }
     
     .conteudo-inicial h3 {
-        font-size: 1.9rem;
+        font-size: 2rem !important;
+    }
+    
+    .texto-digitando {
+        font-size: 1.8rem !important;
     }
     
     .redes-sociais {
-        justify-content: center;
-        margin-top: 30px;
+        display: flex !important;
         flex-direction: row !important;
-        flex-wrap: nowrap;
+        justify-content: center !important;
+        align-items: center !important;
+        margin-top: 35px !important;
+        gap: 18px !important;
+    }
+    
+    .botao-rede {
+        width: 56px !important;
+        height: 56px !important;
+    }
+    
+    .botao-rede i {
+        font-size: 24px !important;
     }
     
     .scroll-indicator {
@@ -451,38 +434,118 @@ body {
     }
 }
 
-/* Tablet portrait e Mobile (até 768px) */
-@media (max-width: 768px) {
+/* Desktop grande (1441px+) - Layout horizontal */
+@media (min-width: 1441px) {
     .area-inicial {
-        flex-direction: column;
-        justify-content: flex-start;
-        padding: 80px 20px 50px; 
-        text-align: center;
-        margin-top: 0;
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: center !important;
+        justify-content: space-between !important;
         min-height: 100vh;
+        padding: 0 5% !important;
+        background-color: #000;
+        max-width: 1400px !important;
+        margin: -60px auto 0 !important;
+        position: relative;
+        text-align: left !important;
+        gap: 0 !important;
+    }
+    
+    .conteudo-inicial {
+        flex: 1 !important;
+        max-width: 600px !important;
+        position: relative;
+        order: 1 !important;
+        margin: 0 !important;
     }
     
     .foto-perfil {
+        flex-shrink: 0;
+        margin-left: 40px !important;
+        margin: 0 0 0 40px !important;
+        opacity: 0;
+        animation: fadeInPhoto 0.7s ease-out 1.0s forwards !important;
+        border: 3px solid #0a66c2;
+        padding: 20px;
+        order: 2 !important;
         position: static;
-        margin: 0 0 30px 0;
-        order: -1;
+    }
+    
+    .foto-perfil img {
+        width: 400px !important;
+        height: 400px !important;
+    }
+    
+    .conteudo-inicial h1 {
+        font-size: 3.2rem !important;
+    }
+    
+    .conteudo-inicial h3 {
+        font-size: 2.3rem !important;
+    }
+    
+    .texto-digitando {
+        font-size: 2rem !important;
+    }
+    
+    .redes-sociais {
+        justify-content: flex-start !important;
+    }
+
+    .botao-rede:nth-child(1) { animation: fadeInUpScale 0.5s ease-out 4.0s forwards !important; }
+    .botao-rede:nth-child(2) { animation: fadeInUpScale 0.5s ease-out 4.2s forwards !important; }
+    .botao-rede:nth-child(3) { animation: fadeInUpScale 0.5s ease-out 4.4s forwards !important; }
+    
+    .scroll-indicator {
+        animation: fadeInScroll 1s ease-out 5.0s forwards !important;
+        display: flex !important;
+    }
+}
+
+/* Tablets portrait menores (769px - 1000px) */
+@media (min-width: 769px) and (max-width: 1000px) {
+    .foto-perfil img {
+        width: 280px !important;
+        height: 280px !important;
+    }
+}
+
+/* Tablets portrait (601px - 768px) - Layout vertical otimizado */
+@media (min-width: 601px) and (max-width: 768px) {
+    .area-inicial {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        padding: 70px 35px;
+        text-align: center;
+        margin: 0 auto;
+        gap: 35px;
+    }
+    
+    .foto-perfil {
+        order: 1;
+        margin: 0;
+        opacity: 0;
         animation: fadeInPhotoMobile 0.7s ease-out 1.0s forwards;
-        border: 2px solid #0a66c2;
-        padding: 10px;
+        border: 3px solid #0a66c2;
+        padding: 15px;
     }
 
     .foto-perfil img {
-        width: 220px;
-        height: 220px;
+        width: 280px;
+        height: 280px;
     }
-
+    
     .conteudo-inicial {
+        order: 2;
         max-width: 100%;
-        margin-top: 20px;
+        margin: 0;
     }
 
     .conteudo-inicial h1 {
-        font-size: 2.5rem;
+        font-size: 2.6rem;
     }
 
     .conteudo-inicial h3 {
@@ -494,11 +557,12 @@ body {
     }
 
     .redes-sociais {
-        justify-content: center;
-        margin-top: 25px;
-        gap: 16px;
+        display: flex !important;
         flex-direction: row !important;
-        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+        margin-top: 30px;
+        gap: 16px;
     }
     
     .botao-rede {
@@ -507,7 +571,7 @@ body {
     }
 
     .botao-rede i {
-        font-size: 22px;
+        font-size: 23px;
     }
     
     .scroll-indicator {
@@ -516,24 +580,36 @@ body {
 }
 
 /* Mobile grande (481px - 600px) */
-@media (max-width: 600px) and (min-width: 481px) {
+@media (min-width: 481px) and (max-width: 600px) {
     .area-inicial {
-        padding-top: 100px;
-        padding-bottom: 50px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        padding: 80px 25px;
+        text-align: center;
+        margin: 0 auto;
+        gap: 25px;
     }
 
     .foto-perfil {
-        margin-bottom: 35px;
+        order: 1;
+        margin: 0;
         padding: 8px;
+        border: 2px solid #0a66c2;
+        animation: fadeInPhotoMobile 0.7s ease-out 1.0s forwards;
     }
 
     .foto-perfil img {
         width: 180px;
         height: 180px;
     }
-
+    
     .conteudo-inicial {
-        margin-top: 30px;
+        order: 2;
+        max-width: 100%;
+        margin: 0;
     }
 
     .conteudo-inicial h1 {
@@ -545,7 +621,7 @@ body {
     }
 
     .texto-digitando {
-        font-size: 1.7rem;
+        font-size: 1.4rem;
     }
 
     .etiqueta-frontend {
@@ -555,10 +631,12 @@ body {
     }
 
     .redes-sociais {
-        gap: 12px;
-        margin-top: 35px;
+        display: flex !important;
         flex-direction: row !important;
-        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+        margin-top: 30px;
+        gap: 16px;
     }
 
     .botao-rede {
@@ -575,34 +653,37 @@ body {
     }
 }
 
-/* Mobile médio (320px - 480px) */
-@media (max-width: 480px) {
+/* Mobile médio (321px - 480px) */
+@media (min-width: 321px) and (max-width: 480px) {
     .area-inicial {
+        display: flex;
         flex-direction: column;
-        justify-content: flex-start;
-        padding: 90px 15px 50px;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        padding: 70px 20px;
         text-align: center;
-        margin-top: 0;
-        min-height: calc(100vh - 20px);
+        margin: 0 auto;
+        gap: 20px;
     }
 
     .foto-perfil {
-        position: static;
-        margin: 0 0 30px 0;
-        order: -1;
-        animation: fadeInPhotoMobile 0.7s ease-out 1.0s forwards;
-        border: 2px solid #0a66c2;
+        order: 1;
+        margin: 0;
         padding: 8px;
+        border: 2px solid #0a66c2;
+        animation: fadeInPhotoMobile 0.7s ease-out 1.0s forwards;
     }
 
     .foto-perfil img {
         width: 160px;
         height: 160px;
     }
-
+    
     .conteudo-inicial {
+        order: 2;
         max-width: 100%;
-        margin-top: 20px;
+        margin: 0;
     }
 
     .conteudo-inicial h1 {
@@ -614,31 +695,31 @@ body {
     }
 
     .texto-digitando {
-        font-size: 1.5rem;
-        white-space: normal;
+        font-size: 1.3rem;
     }
 
     .etiqueta-frontend {
-        font-size: 0.8rem;
-        padding: 5px 10px;
-        margin-bottom: 12px;
+        font-size: 0.75rem;
+        padding: 4px 8px;
+        margin-bottom: 10px;
     }
 
     .redes-sociais {
-        justify-content: center;
-        margin-top: 30px;
-        gap: 12px;
+        display: flex !important;
         flex-direction: row !important;
-        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+        margin-top: 25px;
+        gap: 12px;
     }
 
     .botao-rede {
-        width: 50px;
-        height: 50px;
+        width: 48px;
+        height: 48px;
     }
 
     .botao-rede i {
-        font-size: 20px;
+        font-size: 19px;
     }
     
     .scroll-indicator {
@@ -646,15 +727,37 @@ body {
     }
 }
 
-/* Mobile pequeno (até 319px) */
-@media (max-width: 319px) {
+/* Mobile pequeno (até 320px) */
+@media (max-width: 320px) {
     .area-inicial {
-        padding: 80px 10px 50px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        padding: 60px 15px;
+        text-align: center;
+        margin: 0 auto;
+        gap: 20px;
     }
 
+    .foto-perfil {
+        order: 1;
+        margin: 0;
+        padding: 6px;
+        border: 2px solid #0a66c2;
+        animation: fadeInPhotoMobile 0.7s ease-out 1.0s forwards;
+    }
+    
     .foto-perfil img {
         width: 140px;
         height: 140px;
+    }
+    
+    .conteudo-inicial {
+        order: 2;
+        max-width: 100%;
+        margin: 0;
     }
 
     .conteudo-inicial h1 {
@@ -666,7 +769,22 @@ body {
     }
 
     .texto-digitando {
-        font-size: 1.3rem;
+        font-size: 1.2rem;
+    }
+    
+    .etiqueta-frontend {
+        font-size: 0.7rem;
+        padding: 4px 8px;
+        margin-bottom: 8px;
+    }
+
+    .redes-sociais {
+        display: flex !important;
+        flex-direction: row !important;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+        gap: 10px;
     }
 
     .botao-rede {
