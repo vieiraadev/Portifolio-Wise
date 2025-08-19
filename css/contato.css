@@ -1,6 +1,3 @@
-/* CSS ESPECÍFICO APENAS PARA A SEÇÃO DE CONTATO */
-/* Não afeta outras seções do site */
-
 .contato {
     background-color: #000;
     color: #fff;
@@ -55,7 +52,6 @@
     transform: scaleX(1);
 }
 
-/* Container específico da seção contato */
 .contato .container-contato {
     max-width: 1200px;
     width: 100%;
@@ -67,7 +63,7 @@
     padding: 0 30px;
 }
 
-/* Conteúdo específico da seção contato */
+
 .contato .conteudo-contato {
     max-width: 480px;
     margin: 0;
@@ -96,7 +92,6 @@
     font-weight: 500;
 }
 
-/* Informações de contato específicas */
 .contato .contact-info {
     margin-top: 48px;
     display: flex;
@@ -151,7 +146,6 @@
     color: #fff;
 }
 
-/* Mensagem específica da seção contato */
 .contato .mensagem-contato {
     margin-top: 115px;
     opacity: 0;
@@ -178,7 +172,6 @@
     line-height: 1.7;
 }
 
-/* Destaques específicos da seção contato */
 .contato .destaque-telefone {
     display: inline-flex;
     align-items: center;
@@ -243,7 +236,6 @@
     font-size: 1.3rem;
 }
 
-/* Redes sociais ESPECÍFICAS da seção contato */
 .contato .redes-sociais {
     display: flex;
     gap: 15px;
@@ -284,7 +276,6 @@
     color: #fff;
 }
 
-/* Container do formulário específico */
 .contato .container-formulario {
     flex: 1 1 600px;
     max-width: 700px;
@@ -300,7 +291,6 @@
     transform: translateX(0);
 }
 
-/* Formulário específico da seção contato */
 .contato .formulario-contato {
     background: linear-gradient(135deg, rgba(0, 123, 255, 0.05), rgba(0, 86, 179, 0.08));
     border: 2px solid #0056b3;
@@ -323,7 +313,6 @@
     border-radius: 15px 15px 0 0;
 }
 
-/* Campos específicos do formulário */
 .contato .grupo-campo {
     margin-bottom: 25px;
     position: relative;
@@ -380,7 +369,6 @@
     color: #999;
 }
 
-/* Botão específico da seção contato */
 .contato .botao-envio {
     width: 100%;
     padding: 18px;
@@ -421,8 +409,6 @@
 .contato .botao-envio:active {
     transform: translateY(-1px);
 }
-
-/* ===== RESPONSIVIDADE ESPECÍFICA PARA SEÇÃO CONTATO ===== */
 
 /* Desktop Grande (1200px+) */
 @media (min-width: 1200px) {

@@ -194,7 +194,7 @@
                 </header>
                 <p class="empresa-card">Aprimoramento contínuo</p>
                 <p class="descricao-card">
-                    Capacitações e formações concluídas, comprovando habilidades técnicas e conhecimentos adquiridos ao longo da trajetória profissional.
+                    Capacitações e formações concluídas, comprovando competências adquiridas.
                 </p>
                 <footer class="tecnologias-card">
                     <span class="tech-chip">Java</span>
@@ -539,62 +539,65 @@
 
   <section id="contato" class="contato">
     <h2>Contato</h2>
+  
     <div class="container-contato">
-        <div class="conteudo-contato">
-            <div class="mensagem-contato">
-                <h3>E aí, o que achou?</h3>
-                <p><strong>Vamos trabalhar juntos!</strong></p>
-                <p>Me mande um email e logo eu retornarei!</p>
-                
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class='bx bx-phone'></i>
-                        </div>
-                        <span class="contact-text">+55 (41) 99640-1225</span>
-                    </div>
-                    
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class='bx bx-envelope'></i>
-                        </div>
-                        <span class="contact-text">vieiravitor604@gmail.com</span>
-                    </div>
-                </div>
+      <div class="conteudo-contato">
+        <div class="mensagem-contato">
+          <h3>E aí, o que achou?</h3>
+          <p><strong>Vamos trabalhar juntos!</strong></p>
+          <p>Me mande um email e logo eu retornarei!</p>
+  
+          <div class="contact-info">
+            <div class="contact-item">
+              <div class="contact-icon"><i class='bx bx-phone'></i></div>
+              <span class="contact-text">+55 (41) 99640-1225</span>
             </div>
-    </div>
-        <div class="container-formulario">
-            <form class="formulario-contato" id="formularioContato">
-                <div class="grupo-campo">
-                    <label for="nome">
-                        <i class='bx bx-user'></i>
-                        Nome
-                    </label>
-                    <input type="text" id="nome" name="nome" placeholder="Seu nome completo" required>
-                </div>
-                
-                <div class="grupo-campo">
-                    <label for="email">
-                        <i class='bx bx-envelope'></i>
-                        Email
-                    </label>
-                    <input type="email" id="email" name="email" placeholder="seu@email.com" required>
-                </div>
-                
-                <div class="grupo-campo">
-                    <label for="mensagem">
-                        <i class='bx bx-message-dots'></i>
-                        Mensagem
-                    </label>
-                    <textarea id="mensagem" name="mensagem" placeholder="Digite sua mensagem aqui..." required></textarea>
-                </div>
-                <button type="submit" class="botao-envio">
-                    <i class='bx bx-send'></i>
-                    Enviar Mensagem
-                </button>
-            </form>
+            <div class="contact-item">
+              <div class="contact-icon"><i class='bx bx-envelope'></i></div>
+              <span class="contact-text">vieiravitor604@gmail.com</span>
+            </div>
+          </div>
         </div>
-</section>
+      </div>
+  
+      <div class="container-formulario">
+        <form class="formulario-contato" id="formularioContato"
+              action="https://usebasin.com/f/a6475d2342eb"
+              method="POST" accept-charset="UTF-8" novalidate>
+  
+          <div class="honeypot" aria-hidden="true" style="position:absolute; left:-9999px;">
+            <label>Não preencha este campo:
+              <input type="text" name="website" tabindex="-1" autocomplete="off">
+            </label>
+          </div>
+  
+          <div class="grupo-campo">
+            <label for="nome"><i class='bx bx-user'></i> Nome</label>
+            <input type="text" id="nome" name="nome" placeholder="Seu nome completo" required>
+          </div>
+  
+          <div class="grupo-campo">
+            <label for="email"><i class='bx bx-envelope'></i> Email</label>
+            <input type="email" id="email" name="email" placeholder="seu@email.com" required>
+          </div>
+  
+          <div class="grupo-campo">
+            <label for="mensagem"><i class='bx bx-message-dots'></i> Mensagem</label>
+            <textarea id="mensagem" name="mensagem" placeholder="Digite sua mensagem aqui..." required></textarea>
+          </div>
+  
+          <input type="hidden" name="origem" value="Portfólio - seção Contato">
+          <input type="hidden" name="_subject" value="Novo contato pelo portfólio">
+  
+          <button type="submit" class="botao-envio">
+            <i class='bx bx-send'></i> Enviar Mensagem
+          </button>
+  
+          <p id="statusForm" class="status-form" aria-live="polite" role="status" style="margin-top:10px;"></p>
+        </form>
+      </div>
+    </div>
+  </section>
 </main>
 
 <footer class="rodape">
