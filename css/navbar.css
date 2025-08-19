@@ -146,17 +146,17 @@
     }
 }
 
-/* Tablet portrait e Mobile - Menu Hambúrguer (até 768px) */
-@media (max-width: 768px) {
+/* Tablets em modo paisagem e dispositivos menores - Menu Hambúrguer (até 1024px) */
+@media (max-width: 1024px) {
     .barra-navegacao {
-        padding: 15px 20px;
+        padding: 15px 30px;
         justify-content: space-between;
     }
 
     .logotipo {
         display: block;
         position: static;
-        font-size: 20px;
+        font-size: 22px;
     }
 
     .botao-hamburguer {
@@ -218,7 +218,7 @@
     }
 
     .link-navegacao {
-        font-size: 24px;
+        font-size: 26px;
         font-weight: 500;
         color: #fff;
         padding: 15px 25px;
@@ -238,6 +238,46 @@
 
     .link-navegacao.ativo::after {
         display: none;
+    }
+}
+
+/* Tablet portrait (769px - 1024px) */
+@media (max-width: 1024px) and (min-width: 769px) {
+    .barra-navegacao {
+        padding: 18px 35px;
+    }
+    
+    .logotipo {
+        font-size: 24px;
+    }
+    
+    .link-navegacao {
+        font-size: 28px;
+        padding: 18px 30px;
+    }
+    
+    .menu-navegacao {
+        gap: 45px;
+    }
+}
+
+/* Tablet portrait e Mobile - (até 768px) */
+@media (max-width: 768px) {
+    .barra-navegacao {
+        padding: 15px 20px;
+    }
+
+    .logotipo {
+        font-size: 20px;
+    }
+
+    .link-navegacao {
+        font-size: 24px;
+        padding: 15px 25px;
+    }
+
+    .menu-navegacao {
+        gap: 40px;
     }
 }
 
