@@ -19,7 +19,6 @@
     background: linear-gradient(135deg, #007bff, #0056b3, #004085);
     -webkit-background-clip: text;
     background-clip: text;
-
     -webkit-text-fill-color: transparent;
     display: inline-block;
     margin-bottom: 50px;
@@ -291,29 +290,44 @@
         width: 100%;
         padding: 15px 15px 15px 60px;
         left: 0 !important;
-        text-align: left;
+        text-align: left !important;
         margin-bottom: 25px;
     }
     
     .card-tempo::before { 
-        left: 20px; 
+        left: 20px !important; 
         right: auto;
         top: 35px;
         width: 18px;
         height: 18px;
+        border-color: #007bff !important;
+        box-shadow: 0 0 0 8px rgba(0,123,255,.15), 0 0 25px rgba(0,123,255,.3) !important;
     }
     
     .topo-card {
-        flex-direction: row;
+        flex-direction: row !important;
     }
     
     .tecnologias-card {
-        justify-content: flex-start;
+        justify-content: flex-start !important;
     }
 
     .card-tempo.esquerda .conteudo-card,
     .card-tempo.direita .conteudo-card {
         transform: translateY(40px) scale(0.9);
+        border-color: #007bff !important;
+    }
+
+    .card-tempo.esquerda .conteudo-card:hover,
+    .card-tempo.direita .conteudo-card:hover {
+        border-color: #007bff !important;
+        box-shadow: 0 15px 40px rgba(0, 123, 255, 0.25) !important;
+    }
+
+    .card-tempo.direita .selo-periodo {
+        background: rgba(0, 123, 255, 0.15) !important;
+        border-color: rgba(0, 123, 255, 0.4) !important;
+        color: #bcd8ff !important;
     }
 }
 
