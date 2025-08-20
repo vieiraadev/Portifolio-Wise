@@ -50,7 +50,7 @@ class TelaEntrada {
 
 function iniciarEfeitoDigitacao() {
     const urlSpan = document.querySelector('.url-site span');
-    const texto = 'https://github.com/vieiraadev';
+    const texto = 'https://vieiraadev.github.io/Portifolio-Wise/';
     
     urlSpan.textContent = '';
     urlSpan.classList.add('url-digitacao');
