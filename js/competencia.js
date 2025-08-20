@@ -1,4 +1,3 @@
-// Script completo para a seção de competências
 document.addEventListener('DOMContentLoaded', function() {
   const competencias = document.querySelector('.competencias');
   if (!competencias) return;

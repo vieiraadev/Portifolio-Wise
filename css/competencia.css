@@ -293,24 +293,41 @@
       font-size: 2.4rem;
   }
   
-  .icone-competencia {
-      width: 80px;
-      height: 80px;
-      border-radius: 14px;
-  }
-  
-  .icone-competencia i {
-      font-size: 2.5rem;
-  }
-  
   .cartao-competencia {
+      grid-column: span 6;
       padding: 16px 14px;
       gap: 10px;
   }
+  
+  .icone-competencia {
+      width: 70px;
+      height: 70px;
+      border-radius: 12px;
+  }
+  
+  .icone-competencia i {
+      font-size: 2.2rem;
+  }
+  
+  .titulo-competencia {
+      font-size: 0.9rem;
+  }
+  
+  .selo-nivel {
+      font-size: 0.7rem;
+      padding: 3px 6px;
+      max-width: 100px;
+  }
 
   .gallery-controls {
-      flex-direction: column;
+      flex-direction: row;
       gap: 20px;
+      align-items: center;
+      justify-content: center;
+  }
+  
+  .grade-competencias {
+      gap: 12px;
   }
 }
 
