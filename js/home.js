@@ -94,7 +94,7 @@ const ScrollIndicator = {
         if (scrolledDown && !estado.scrollIndicatorHidden) {
             this.esconderIndicador(scrollIndicator);
         } else if (!scrolledDown && estado.scrollIndicatorHidden) {
-            this.mostrarIndicador(scrollIndicador);
+            this.mostrarIndicador(scrollIndicator);
         }
     },
 
