@@ -236,6 +236,113 @@
   transform: scale(1.4);
 }
 
+.cartao-competencia {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%; 
+}
+
+.conteudo-principal {
+  flex: 1;
+}
+
+.origem-aprendizado {
+  font-size: 0.65rem;
+  color: #8a9ba8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  margin-top: auto;
+  margin-bottom: 0; 
+  opacity: 0.9;
+  transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+  position: relative;
+  background: linear-gradient(135deg, rgba(0, 123, 255, 0.05), rgba(0, 86, 179, 0.08));
+  padding: 6px 12px;
+  border-radius: 20px;
+  border: 1px solid rgba(0, 123, 255, 0.2);
+  backdrop-filter: blur(5px);
+  font-weight: 500;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.origem-aprendizado::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  transition: left 0.6s ease;
+}
+
+.cartao-competencia:hover .origem-aprendizado::before {
+  left: 100%;
+}
+
+.origem-aprendizado i {
+  font-size: 0.9rem;
+  color: #007bff;
+  background: rgba(0, 123, 255, 0.15);
+  padding: 4px;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s ease;
+  box-shadow: 0 2px 8px rgba(0, 123, 255, 0.2);
+}
+
+.origem-aprendizado .texto-origem {
+  background: linear-gradient(135deg, #a5c8ff, #007bff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 600;
+  position: relative;
+}
+
+.cartao-competencia:hover .origem-aprendizado {
+  color: #fff;
+  background: linear-gradient(135deg, rgba(0, 123, 255, 0.2), rgba(0, 86, 179, 0.25));
+  border-color: #007bff;
+  box-shadow: 0 4px 15px rgba(0, 123, 255, 0.3);
+  transform: translateY(-2px) scale(1.05);
+}
+
+.cartao-competencia:hover .origem-aprendizado i {
+  background: #007bff;
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(0, 123, 255, 0.4);
+  transform: rotate(360deg) scale(1.1);
+}
+
+.cartao-competencia:hover .origem-aprendizado .texto-origem {
+  background: linear-gradient(135deg, #fff, #a5c8ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@media (max-width: 480px) {
+  .origem-aprendizado {
+    font-size: 0.6rem;
+    padding: 5px 10px;
+    gap: 5px;
+  }
+  .origem-aprendizado i {
+    width: 18px;
+    height: 18px;
+    font-size: 0.8rem;
+  }
+}
 @media (min-width: 720px) {
   .cartao-competencia {
       grid-column: span 6;
